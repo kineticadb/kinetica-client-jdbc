@@ -12,13 +12,13 @@ JDBCSample is a sample jdbc client project. You can compile by executing
 
 and then you execute with the following command. Change as needed for a linux based invocation. 
 
-java -cp .;"<your_path>\SimbaJDBCClient4.jar" com.gisfederal.gpudbquery.JDBCSample -DriverClass com.simba.client.core.jdbc4.JDBC4Driver -URL "jdbc:simba://yourodbcserverIP:9292;URL=http://yourgpudbIP:9191;ParentSet=MASTER" -PWD pwd -UID uid
+java -cp .;"<your_path>\SimbaJDBCClient4.jar" com.gisfederal.gpudbquery.JDBCSample -DriverClass com.simba.client.core.jdbc4.SJDBC4Driver -URL "jdbc:simba://yourodbcserverIP:9292;URL=http://yourgpudbIP:9191;ParentSet=MASTER" -PWD pwd -UID uid
 
-Example invocation - C:\1GAIA\gpudb-client-jdbc\JDBCSample\target>java -cp .;gpudb-java-sample-0.1.0-jar-with-dependencies.jar;..\..\JDBCDriver\SimbaJDBCClient4.jar com.gisfederal.gpudbquery.JDBCSample -DriverClass com.simba.client.core.jdbc4.JDBC4Driver -URL "jdbc:simba://172.30.70.6:9292;URL=http://172.30.70.6:9191;ParentSet=MASTER" -PWD pwd -UID uid
+Example invocation - C:\1GAIA\gpudb-client-jdbc\JDBCSample\target>java -cp .;gpudb-java-sample-0.1.0-jar-with-dependencies.jar;..\..\JDBCDriver\SimbaJDBCClient4.jar com.gisfederal.gpudbquery.JDBCSample -DriverClass com.simba.client.core.jdbc4.SJDBC4Driver -URL "jdbc:simba://172.30.70.6:9292;URL=http://172.30.70.6:9191;ParentSet=MASTER" -PWD pwd -UID uid
 
 If the project is imported into eclipse, the program arguments are (as an exmaple)
 
--DriverClass com.simba.client.core.jdbc4.JDBC4Driver -URL jdbc:simba://172.30.70.6:9292;URL=http://172.30.70.6:9191;ParentSet=MASTER -PWD pwd -UID uid
+-DriverClass com.simba.client.core.jdbc4.SJDBC4Driver -URL jdbc:simba://172.30.70.6:9292;URL=http://172.30.70.6:9191;ParentSet=MASTER -PWD pwd -UID uid
 
 where jdbc:simba://172.30.70.6:9292 is the ODBC server address and http://172.30.70.6:9191 is where GPUdb is running. 
 
