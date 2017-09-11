@@ -8,7 +8,7 @@ JDBC Client Sample Program -->
 
 JDBCSample is a sample jdbc client project. You can compile by executing
 
-"mvn client package"
+"mvn clean package"
 
 and then you execute with the following command. Change as needed for a linux based invocation. 
 
