@@ -2,7 +2,23 @@
 
 ## Version 7.0
 
-### Version 7.0.8 - 2018-09-17
+### Version 7.0.9 - 2019-10-30
+
+#### Added
+-   Support for CREATE PROCEDURE
+-   Can now specify a URL as the first parameter on the JDBC Connection String
+--  Can specify http or https, but these are optional
+--  Starting with "//" is optional (when "http" or "https" are not specified)
+--  May contain a path after the port, including slashes 
+   
+#### Fixed
+-   Escape characters specified in INSERT FROM FILE parameters
+-   Inserting into a result table
+-   Insert was under reporting number of added rows, when the insert took multiple batches
+-   Fix for inserting NULL as blank string in CSV for DECIMAL, DATE, DATETIME, TIME, IPV4 and ULONG columns
+-   Minor KISQL command-line parameter parsing fixes
+
+### Version 7.0.8 - 2019-09-17
 
 #### Added
 -   Added support for getPrimaryKeys() and getIndexInfo

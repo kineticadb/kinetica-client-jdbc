@@ -2,5 +2,5 @@
 
 BINPATH="$( cd "$( dirname "$(readlink -m "${BASH_SOURCE[0]}")" )" && pwd )"
 
-exec java -jar ${BINPATH}/kinetica-*dependencies.jar "$@"
+exec java -jar ${BINPATH}/kinetica-jdbc-[0-9]*dependencies.jar "$@"
 

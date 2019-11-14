@@ -1,0 +1,6 @@
+#! /usr/bin/env bash
+
+BINPATH="$( cd "$( dirname "$(readlink -m "${BASH_SOURCE[0]}")" )" && pwd )"
+
+exec java -jar ${BINPATH}/kinetica-jdbc-java7-*dependencies.jar "$@"
+
