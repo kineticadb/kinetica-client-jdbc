@@ -2,6 +2,21 @@
 
 ## Version 7.0
 
+### Version 7.0.14.0 - 2020-03-18
+
+#### Changed
+-   JDBC now returns times in UTC/GMT
+
+#### Fixed
+-   kisql to use the timezone parameter correctly
+
+
+### Version 7.0.12.1 - 2020-03-05
+
+#### Changed
+-   Updated the Java API version dependency to 7.0.12.1
+
+
 ### Version 7.0.9 - 2019-10-30
 
 #### Added
