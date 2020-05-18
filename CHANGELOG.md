@@ -2,6 +2,40 @@
 
 ## Version 7.0
 
+### Version 7.0.16.0 - 2020-05-04
+
+#### Added
+-   Added support for multi-line SQL Procedures
+-   Added RowsPerInsertion connection string parameter
+-   Added \metadata and \version commands to kisql
+
+#### Changed
+-   Removed support for password and truststorepwd command-line parameters (and synonyms)
+-   Use KI_PWD environment variable, and user is prompted if KI_PWD is not set
+-   Changed CSVParser to more closely match ODBC features
+-   Updated reported metadata from JDBC Driver
+
+
+### Version 7.0.15.0 - 2020-05-02
+
+#### Changed
+-   Updated Java API version dependency to 7.0.15.1.
+
+
+### Version 7.0.14.4 - 2020-04-01
+
+#### Fixed
+-   Fixed SslAllowHostMismatch by now using Java API to do this
+
+
+### Version 7.0.14.2 - 2020-03-24
+
+#### Changed
+-   Added support for TimeZoneOverride option to JDBC Connection string
+-   Added --TimeZoneOverride option to kisql to pass this to JDBC
+-   Added --listalltimezones to kisql to output the valid timezones
+
+
 ### Version 7.0.14.0 - 2020-03-18
 
 #### Changed
