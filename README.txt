@@ -1,4 +1,4 @@
-The 7.0 JDBC jar will not work with GPUdb Servers lower than 7.0.  Or vice versa -- the previous JDBC jars will not connect to a GPUdb Server version 7.0 or later.
+The 7.1 JDBC jar will not work with GPUdb Servers lower than 7.1.  Or vice versa -- the previous JDBC jars will not connect to a GPUdb Server version 7.1 or later.
 
 JDBCDriver -->
 
@@ -27,9 +27,9 @@ JDBCSample is a sample jdbc client project. You can compile by executing
 
 and then you execute with the following command. Change as needed for a linux based invocation. 
 
-java -cp .;"<your_path>\kinetica-jdbc-7.0.0.0-jar-with-dependencies.jar" com.gisfederal.gpudbquery.JDBCSample -DriverClass com.kinetica.jdbc.Driver -URL "jdbc:kinetica://gpudb-machine-name-or-ip:9191" -PWD pwd -UID uid
+java -cp .;"<your_path>\kinetica-jdbc-7.1.0.0-jar-with-dependencies.jar" com.gisfederal.gpudbquery.JDBCSample -DriverClass com.kinetica.jdbc.Driver -URL "jdbc:kinetica://gpudb-machine-name-or-ip:9191" -PWD pwd -UID uid
 
-Example invocation - C:\1GAIA\gpudb-client-jdbc\JDBCSample\target>java -cp .;gpudb-java-sample-0.1.0-jar-with-dependencies.jar;..\..\JDBCDriver\kinetica-jdbc-7.0.0.0-jar-with-dependencies.jar com.gisfederal.gpudbquery.JDBCSample -DriverClass com.kinetica.jdbc.Driver -URL "jdbc:kinetica://gpudb-machine-name-or-ip:9191" -PWD pwd -UID uid
+Example invocation - C:\1GAIA\gpudb-client-jdbc\JDBCSample\target>java -cp .;gpudb-java-sample-0.1.0-jar-with-dependencies.jar;..\..\JDBCDriver\kinetica-jdbc-7.1.0.0-jar-with-dependencies.jar com.gisfederal.gpudbquery.JDBCSample -DriverClass com.kinetica.jdbc.Driver -URL "jdbc:kinetica://gpudb-machine-name-or-ip:9191" -PWD pwd -UID uid
 
 If the project is imported into eclipse, the program arguments are (as an exmaple)
 
@@ -37,4 +37,4 @@ If the project is imported into eclipse, the program arguments are (as an exmapl
 
 where http://gpudb-machine-name-or-ip:9191 is where GPUdb is running. 
 
-Please note the kinetica-jdbc-7.0.0.0-jar-with-dependencies.jar has to be in the classpath and this jar is available as part of this repo under the directory connectors/jdbc.
+Please note the kinetica-jdbc-7.1.0.0-jar-with-dependencies.jar has to be in the classpath and this jar is available as part of this repo under the directory connectors/jdbc.
