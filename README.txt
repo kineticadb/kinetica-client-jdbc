@@ -1,8 +1,8 @@
-The 7.0 JDBC jar will not work with GPUdb Servers lower than 7.0.  Or vice versa -- the previous JDBC jars will not connect to a GPUdb Server version 7.0 or later.
+The 7.1 JDBC jar will not work with GPUdb Servers lower than 7.1.  Or vice versa -- the previous JDBC jars will not connect to a GPUdb Server version 7.1 or later.
 
 JDBCDriver -->
 
-The JDBCDriver folder contians the JDBC jar, and kisql shell script.  If you are using a JDBC Client, or writing your own JDBC Client, then you only need the jar file.  The class to use in this jar is: com.kinetica.jdbc.Driver
+The JDBCDriver folder contains the JDBC jar, and kisql shell script.  If you are using a JDBC Client, or writing your own JDBC Client, then you only need the jar file.  The class to use in this jar is: com.kinetica.jdbc.Driver
 
 The kisql utility is a SQL environment with similarities to isql.  It can also process SQL commands in a file, or from the command-line.
 
@@ -25,16 +25,16 @@ JDBCSample is a sample jdbc client project. You can compile by executing
 
 "mvn clean package"
 
-and then you execute with the following command. Change as needed for a linux based invocation. 
+and then you execute with the following command, ensuring `<x>` and `<y>` are replaced with the appropriate version numbers. Change as needed for a linux based invocation. 
 
-java -cp .;"<your_path>\kinetica-jdbc-7.0.0.0-jar-with-dependencies.jar" com.gisfederal.gpudbquery.JDBCSample -DriverClass com.kinetica.jdbc.Driver -URL "jdbc:kinetica://gpudb-machine-name-or-ip:9191" -PWD pwd -UID uid
+java -cp .;"<your_path>\kinetica-jdbc-7.1.<x>.<y>-jar-with-dependencies.jar" com.gisfederal.gpudbquery.JDBCSample -DriverClass com.kinetica.jdbc.Driver -URL "jdbc:kinetica://gpudb-machine-name-or-ip:9191" -PWD pwd -UID uid
 
-Example invocation - C:\1GAIA\gpudb-client-jdbc\JDBCSample\target>java -cp .;gpudb-java-sample-0.1.0-jar-with-dependencies.jar;..\..\JDBCDriver\kinetica-jdbc-7.0.0.0-jar-with-dependencies.jar com.gisfederal.gpudbquery.JDBCSample -DriverClass com.kinetica.jdbc.Driver -URL "jdbc:kinetica://gpudb-machine-name-or-ip:9191" -PWD pwd -UID uid
+Example invocation - C:\1GAIA\gpudb-client-jdbc\JDBCSample\target>java -cp .;gpudb-java-sample-0.1.0-jar-with-dependencies.jar;..\..\JDBCDriver\kinetica-jdbc-7.1.0.0-jar-with-dependencies.jar com.gisfederal.gpudbquery.JDBCSample -DriverClass com.kinetica.jdbc.Driver -URL "jdbc:kinetica://gpudb-machine-name-or-ip:9191" -PWD pwd -UID uid
 
-If the project is imported into eclipse, the program arguments are (as an exmaple)
+If the project is imported into eclipse, the program arguments are (as an examples)
 
 -DriverClass com.kinetica.jdbc.Drivercom.kinetica.jdbc.Driver -URL jdbc:kinetica://gpudb-machine-name-or-ip:9191 -PWD pwd -UID uid
 
 where http://gpudb-machine-name-or-ip:9191 is where GPUdb is running. 
 
-Please note the kinetica-jdbc-7.0.0.0-jar-with-dependencies.jar has to be in the classpath and this jar is available as part of this repo under the directory connectors/jdbc.
+Please note the kinetica-jdbc-7.1.<x>.<y>-jar-with-dependencies.jar has to be in the classpath and this jar is available as part of this repo under the directory connectors/jdbc.
