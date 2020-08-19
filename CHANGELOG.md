@@ -1,6 +1,31 @@
 # Kinetica JDBC Connector
 
+## Version 7.1
+
+### Version 7.1.0 - 2020-08-18
+
+#### Added
+-   Support for SET SCHEMA command
+--  Only valid when talking to a 7.1 GPUdb Server
+-   Support for --schema kisql command-line parameter
+-   Support for "schema" parameter on JDBC Connection string
+-   Support for "schema" parameter to ODBC
+
+
 ## Version 7.0
+
+### Version 7.0.18 - 2020-06-05
+
+#### Added
+-   Added META-INF/services/java.sql.Driver
+
+
+### Version 7.0.16.2 - 2020-06-02
+
+#### Changed
+-   supportsBatchUpdates() metadata returns true
+-   Trust Store password supports empty environment variable for blank password.
+
 
 ### Version 7.0.16.0 - 2020-05-04
 
@@ -51,14 +76,24 @@
 -   Updated the Java API version dependency to 7.0.12.1
 
 
-### Version 7.0.9 - 2019-10-30
+### Version 7.0.12 - 2019-12-19
+
+#### Added
+-   Having a Materialized View under construction will not cause problems when getting metadata about other tables
+
+#### Fixed
+-   KiSQL now returns a linux status code indicating an error, if running SQL from a command-line or file and there is an error
+
+### Version 7.0.9 - 2019-10-31
 
 #### Added
 -   Support for CREATE PROCEDURE
 -   Can now specify a URL as the first parameter on the JDBC Connection String
 --  Can specify http or https, but these are optional
 --  Starting with "//" is optional (when "http" or "https" are not specified)
---  May contain a path after the port, including slashes 
+--  May contain a path after the port, including slashes
+-   Version info now includes API version and KiSQL version
+-   Documented the --version option in the KiSQL --help text
    
 #### Fixed
 -   Escape characters specified in INSERT FROM FILE parameters
