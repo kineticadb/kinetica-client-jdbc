@@ -2,6 +2,13 @@
 
 ## Version 7.1
 
+### Version 7.1.0.2 - 2020-09-25
+
+#### Added
+-   Support for DisableAutoDiscovery and DisableFailover connection string options
+-   Support for --disableAutoDiscovery and --disableFailover kisql command-line parameter
+
+
 ### Version 7.1.0 - 2020-02-03
 
 #### Added
