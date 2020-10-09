@@ -21,6 +21,12 @@
 
 ## Version 7.0
 
+### Version 7.0.20 - 2020-09-24
+
+#### Added
+-   Added Procedure metadata
+
+
 ### Version 7.0.18 - 2020-06-05
 
 #### Added
