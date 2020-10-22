@@ -2,6 +2,25 @@
 
 ## Version 7.0
 
+### Version 7.0.19.8 - 2020-10-01
+
+#### Fixed
+-   SET USER support for external users (with leading "@")
+
+
+### Version 7.0.18 - 2020-06-05
+
+#### Added
+-   Added META-INF/services/java.sql.Driver
+
+
+### Version 7.0.16.2 - 2020-06-02
+
+#### Changed
+-   supportsBatchUpdates() metadata returns true
+-   Trust Store password supports empty environment variable for blank password.
+
+
 ### Version 7.0.16.0 - 2020-05-04
 
 #### Added
