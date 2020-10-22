@@ -9,7 +9,7 @@
 -   Support for --disableAutoDiscovery and --disableFailover kisql command-line parameter
 
 
-### Version 7.1.0 - 2020-08-18
+### Version 7.1.0 - 2020-02-03
 
 #### Added
 -   Support for SET SCHEMA command
@@ -25,6 +25,12 @@
 
 #### Added
 -   Added Procedure metadata
+
+
+### Version 7.0.19.8 - 2020-10-01
+
+#### Fixed
+-   SET USER support for external users (with leading "@")
 
 
 ### Version 7.0.18 - 2020-06-05
