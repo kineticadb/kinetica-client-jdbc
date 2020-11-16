@@ -2,6 +2,15 @@
 
 ## Version 7.0
 
+### Version 7.0.20 - 2020-11-16
+
+#### Added
+-   Added Procedure metadata
+
+#### Fixed
+-   Server-side inserts do not waste time parsing on the client
+
+
 ### Version 7.0.19.8 - 2020-10-01
 
 #### Fixed
