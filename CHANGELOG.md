@@ -1,6 +1,26 @@
-# Kinetica JDBC Connector
+# Kinetica JDBC/KiSQL
 
 ## Version 7.1
+
+### Version 7.1.5.0 - 2021-10-13
+
+#### Added
+-   UPLOAD and DOWNLOAD commands
+-   Single-file executable versions of KiSQL, which can be run anywhere
+
+
+### Version 7.1.3.0 - 2021-03-09
+
+#### Added
+-   KiSQL output of very large and very small DOUBLE and FLOAT values now uses scientific notation
+
+
+### Version 7.1.2.1 - 2021-01-29
+
+#### Changed
+-   Java API dependency version to be 7.1.2.2 and above to take
+    advantage of recent security related fixes.
+
 
 ### Version 7.1.0.2 - 2020-09-25
 
@@ -9,7 +29,7 @@
 -   Support for --disableAutoDiscovery and --disableFailover kisql command-line parameter
 
 
-### Version 7.1.0 - 2020-02-03
+### Version 7.1.0.0 - 2020-02-03
 
 #### Added
 -   Support for SET SCHEMA command
@@ -21,10 +41,20 @@
 
 ## Version 7.0
 
-### Version 7.0.20 - 2020-09-24
+### Version 7.0.20.1 - 2021-01-29
+
+#### Changed
+-   Java API dependency version to be 7.0.20.3 and above to take
+    advantage of recent security related fixes.
+
+
+### Version 7.0.20.0 - 2020-11-16
 
 #### Added
 -   Added Procedure metadata
+
+#### Fixed
+-   Server-side inserts do not waste time parsing on the client
 
 
 ### Version 7.0.19.8 - 2020-10-01
@@ -113,7 +143,7 @@
 --  May contain a path after the port, including slashes
 -   Version info now includes API version and KiSQL version
 -   Documented the --version option in the KiSQL --help text
-   
+
 #### Fixed
 -   Escape characters specified in INSERT FROM FILE parameters
 -   Inserting into a result table
@@ -148,19 +178,19 @@
 
 #### Added
 -   Support for specifying columns for both table and CSV file in INSERT command.
---   E.g., INSERT INTO t(col1, col2) SELECT col3, col4 FROM FILE."/tmp/table.csv"; 
+--   E.g., INSERT INTO t(col1, col2) SELECT col3, col4 FROM FILE."/tmp/table.csv";
 -   Added DELIMITER support to CSV INSERT command.
---   E.g., INSERT INTO t SELECT * FROM FILE."/tmp/table.csv" DELIMITER='\t'; 
+--   E.g., INSERT INTO t SELECT * FROM FILE."/tmp/table.csv" DELIMITER='\t';
 
 ### Version 7.0.5 - 2019-06-26
 
 #### Added
--   CombinePrepareAndExecute setting. 
+-   CombinePrepareAndExecute setting.
 
 ### Version 7.0.4 - 2019-05-29
 
 #### Added
--   Support for PrimaryURL in KiSQL and JDBC Driver. 
+-   Support for PrimaryURL in KiSQL and JDBC Driver.
 
 #### Changed
 -   Always show warnings.
@@ -168,7 +198,7 @@
 ### Version 7.0.3.? - 2019-05-07
 
 #### Changed
--   Updated connection error message (and others) to include more info. 
+-   Updated connection error message (and others) to include more info.
 -   Changed the dependent Java API to be 7.0.3
     to pick up latest changes around high availability
     failover support.
@@ -188,7 +218,7 @@
 -   KISQL now supports Unix-like parameters with double hyphens.
 -   KISQL now supports boolean parameters without values (default: true)
 -   KISQL now formats output with CR/LF better.
--   Updated logging 
+-   Updated logging
 
 ### Version 7.0.2.0 - 2019-04-15
 
