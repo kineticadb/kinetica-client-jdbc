@@ -2,6 +2,32 @@
 
 ## Version 7.1
 
+### Version 7.1.6.0 - 2022-01-27
+
+#### Added
+-   kisql shows abbreviated prompt (i.e., ">") when continuing a SQL Command, in interactive mode
+-   Add optional WITH OPTIONS for INSERT statements to match LOAD INTO syntax
+-   kisql commands:
+    -   \columns (\u)
+    -   \indices (\i)
+    -   \meta-test
+    -   \primarykeys (\k)
+    -   \procedures (\p)
+    -   \schemas (\s)
+    -   (\t) as a shortcut for \tables
+
+#### Changed
+-   Changed DOWNLOAD syntax to: DOWNLOAD FILES <kifs-files> INTO <local-path> [WITH OPTIONS (<comma_seperated_key_value_list>)]
+-   Retrun better errors and warnings from INSERT
+-   Better handling of "\N" when it is the NULL string and "\" is the escape character, when reading CSV files
+-   Reduce output for CSV errors in files with extremely long lines
+
+#### Fixed
+-   Filtering of Metadata is now case insensitive
+-   Better handling of errors reading header line in CSV
+-   Better handling of mixed-case filenames
+
+
 ### Version 7.1.5.0 - 2021-10-13
 
 #### Added
