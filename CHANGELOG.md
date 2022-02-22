@@ -2,6 +2,12 @@
 
 ## Version 7.1
 
+### Version 7.1.6.1 - 2022-02-22
+
+#### Changed
+-   Swapped out Log4j dependence for SLF4J
+
+
 ### Version 7.1.6.0 - 2022-01-27
 
 #### Added
