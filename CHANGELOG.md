@@ -2,6 +2,14 @@
 
 ## Version 7.1
 
+### Version 7.1.7.0 - 2022-07-18
+
+#### Added
+-   kisql interactive mode now supports line editing, up arrow to see previous commands, etc.
+-   Support multiple files for DOWNLOAD FILE
+-   Improved error handling
+
+
 ### Version 7.1.6.1 - 2022-02-22
 
 #### Changed
@@ -72,6 +80,12 @@
 
 
 ## Version 7.0
+
+### Version 7.0.20.2 - 2022-04-01
+
+#### Changed
+-   Better reporting of errors when inserting with prepared statements.
+
 
 ### Version 7.0.20.1 - 2021-01-29
 
