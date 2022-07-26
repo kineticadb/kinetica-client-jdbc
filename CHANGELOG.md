@@ -2,7 +2,32 @@
 
 ## Version 7.0
 
-### Version 7.0.20 - 2020-11-16
+### Version 7.0.20.4 - 2022-07-25
+
+#### Fixed
+-   Issue with thread over-accumulation when inserting data
+
+
+### Version 7.0.20.3 - 2022-06-08
+
+#### Changed
+-   Updated dependent library versions
+
+
+### Version 7.0.20.2 - 2022-04-01
+
+#### Changed
+-   Better reporting of errors when inserting with prepared statements.
+
+
+### Version 7.0.20.1 - 2021-01-28
+
+#### Changed
+-   Java API dependency version to be 7.0.20.3 and above to take
+    advantage of recent security related fixes.
+
+
+### Version 7.0.20.0 - 2020-11-16
 
 #### Added
 -   Added Procedure metadata
@@ -86,8 +111,8 @@
 -   Can now specify a URL as the first parameter on the JDBC Connection String
 --  Can specify http or https, but these are optional
 --  Starting with "//" is optional (when "http" or "https" are not specified)
---  May contain a path after the port, including slashes 
-   
+--  May contain a path after the port, including slashes
+
 #### Fixed
 -   Escape characters specified in INSERT FROM FILE parameters
 -   Inserting into a result table
@@ -122,19 +147,19 @@
 
 #### Added
 -   Support for specifying columns for both table and CSV file in INSERT command.
---   E.g., INSERT INTO t(col1, col2) SELECT col3, col4 FROM FILE."/tmp/table.csv"; 
+--   E.g., INSERT INTO t(col1, col2) SELECT col3, col4 FROM FILE."/tmp/table.csv";
 -   Added DELIMITER support to CSV INSERT command.
---   E.g., INSERT INTO t SELECT * FROM FILE."/tmp/table.csv" DELIMITER='\t'; 
+--   E.g., INSERT INTO t SELECT * FROM FILE."/tmp/table.csv" DELIMITER='\t';
 
 ### Version 7.0.5 - 2019-06-26
 
 #### Added
--   CombinePrepareAndExecute setting. 
+-   CombinePrepareAndExecute setting.
 
 ### Version 7.0.4 - 2019-05-29
 
 #### Added
--   Support for PrimaryURL in KiSQL and JDBC Driver. 
+-   Support for PrimaryURL in KiSQL and JDBC Driver.
 
 #### Changed
 -   Always show warnings.
@@ -142,7 +167,7 @@
 ### Version 7.0.3.? - 2019-05-07
 
 #### Changed
--   Updated connection error message (and others) to include more info. 
+-   Updated connection error message (and others) to include more info.
 -   Changed the dependent Java API to be 7.0.3
     to pick up latest changes around high availability
     failover support.
@@ -162,7 +187,7 @@
 -   KISQL now supports Unix-like parameters with double hyphens.
 -   KISQL now supports boolean parameters without values (default: true)
 -   KISQL now formats output with CR/LF better.
--   Updated logging 
+-   Updated logging
 
 ### Version 7.0.2.0 - 2019-04-15
 
