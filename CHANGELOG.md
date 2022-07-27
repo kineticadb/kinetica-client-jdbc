@@ -2,6 +2,12 @@
 
 ## Version 7.1
 
+### Version 7.1.7.1 - 2022-07-27
+
+#### Added
+-   Improved insert performance
+
+
 ### Version 7.1.7.0 - 2022-07-18
 
 #### Added
