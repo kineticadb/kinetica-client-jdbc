@@ -1,6 +1,15 @@
-<img src="https://2wz2rk1b7g6s3mm3mk3dj0lh-wpengine.netdna-ssl.com/wp-content/uploads/2018/08/kinetica_logo.svg" alt="Kinetica Logo" width="300"/>
-
-### The Database for Time and Space
+<h3 align="center" style="margin:0px">
+	<img width="200" src="https://2wz2rk1b7g6s3mm3mk3dj0lh-wpengine.netdna-ssl.com/wp-content/uploads/2018/08/kinetica_logo.svg" alt="Kinetica Logo"/>
+</h3>
+<h5 align="center" style="margin:0px">
+	<a href="https://www.kinetica.com/">Website</a>
+	|
+	<a href="https://docs.kinetica.com/7.1/">Docs</a>
+	|
+	<a href="https://docs.kinetica.com/7.1/connectors/sql_guide/">JDBC Docs</a>
+	|
+	<a href="https://join.slack.com/t/kinetica-community/shared_invite/zt-1bt9x3mvr-uMKrXlSDXfy3oU~sKi84qg">Community Slack</a>   
+</h5>
 
 
 # Kinetica JDBC Driver
@@ -29,8 +38,7 @@ Note that the version of the driver must match that of the database; e.g., the
 
 Kinetica JDBC driver JAR:
 
-    kinetica-jdbc-7.1.<X>.<Y>-jar-with-dependencies.jar        (Java 1.8+)
-    kinetica-jdbc-java7-7.1.<X>.<Y>-jar-with-dependencies.jar  (Java 1.7)
+    kinetica-jdbc-7.1.<X>.<Y>-jar-with-dependencies.jar
 
 Driver class:
 
@@ -91,19 +99,22 @@ parameter, and the URL of the one to use first for the `PrimaryURL` parameter:
 - [ODBC/JDBC Connection Guide](https://docs.kinetica.com/7.1/connectors/sql_guide/)
 
 
-## About Us
-Kinetica is an analytics database for fusing data across streams and data lakes
-to unlock value from spatial and temporal data at scale and speed. Learn about
-us [here](https://www.kinetica.com/).
+## Support
+
+For bugs, please submit an
+[issue on Github](https://github.com/kineticadb/kinetica-client-jdbc/issues).
+
+For support, you can post on
+[stackoverflow](https://stackoverflow.com/questions/tagged/kinetica) under the
+``kinetica`` tag or
+[Slack](https://join.slack.com/t/kinetica-community/shared_invite/zt-1bt9x3mvr-uMKrXlSDXfy3oU~sKi84qg).
 
 
 ## Contact Us
-- Follow on Github: <a class="github-button" href="https://github.com/kineticadb" data-size="large" aria-label="Follow @kineticadb on GitHub">Follow @kineticadb</a>
-- Email: [support@kinetica.com](mailto:support@kinetica.com)
-- Slack: [Slack](https://www.kinetica.com/slack)
-- Visit: [https://www.kinetica.com/contact/](https://www.kinetica.com/contact/)
 
-
-## License
-
-The software is licensed under the MIT license.
+* Ask a question on Slack:
+  [Slack](https://join.slack.com/t/kinetica-community/shared_invite/zt-1bt9x3mvr-uMKrXlSDXfy3oU~sKi84qg)
+* Follow on GitHub:
+  [Follow @kineticadb](https://github.com/kineticadb) 
+* Email us:  <support@kinetica.com>
+* Visit:  <https://www.kinetica.com/contact/>

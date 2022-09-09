@@ -2,6 +2,13 @@
 
 ## Version 7.1
 
+### Version 7.1.7.3 - 2022-09-08
+
+#### Changed
+-   Default to allowing self-signed certs
+-   Materialized views are no longer reported as schemas
+
+
 ### Version 7.1.7.2 - 2022-08-12
 
 #### Added
