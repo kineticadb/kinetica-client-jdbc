@@ -2,6 +2,12 @@
 
 ## Version 7.1
 
+### Version 7.1.7.5 - 2022-10-03
+
+#### Changed
+-   Updated underlying Java API
+
+
 ### Version 7.1.7.4 - 2022-09-19
 
 #### Changed
