@@ -19,9 +19,8 @@
 -  [Connect](#connect)
 -  [Examples](#examples)
 -  [Documentation](#documentation)
--  [About Us](#about-us)
+-  [Support](#support)
 -  [Contact Us](#contact-us)
--  [License](#license)
  
 
 ## Overview
