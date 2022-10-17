@@ -2,6 +2,16 @@
 
 ## Version 7.1
 
+### Version 7.1.8.0 - 2022-08-04
+
+#### Added
+-   Support for fast record retrieval with `KI_HINT_KEY_LOOKUP`
+-   New `DisableMultiheadInsert` setting to route all inserts to the head node
+-   Relocation of shaded dependencies
+-   Improved reporting of errors for INSERTs
+-   BLOB/CLOB support
+
+
 ### Version 7.1.7.7 - 2022-10-11
 
 #### Changed
@@ -40,17 +50,20 @@
 -   Updated underlying Java API
 
 
-### Version 7.1.7.1 - 2022-07-27
+### Version 7.1.7.1 - 2022-07-25
 
-#### Added
--   Improved insert performance
+#### Changed
+-   Better caching and reuse of BulkInserter object
 
 
-### Version 7.1.7.0 - 2022-07-18
+### Version 7.1.7.0 - 2022-06-15
 
 #### Added
 -   kisql interactive mode now supports line editing, up arrow to see previous commands, etc.
 -   Support multiple files for DOWNLOAD FILE
+
+#### Changed
+-   Improved insert performance
 -   Improved error handling
 
 
@@ -63,7 +76,7 @@
 ### Version 7.1.6.0 - 2022-01-27
 
 #### Added
--   kisql shows abbreviated prompt (i.e., ">") when continuing a SQL Command, in interactive mode
+-   kisql shows abbreviated prompt (i.e., `>`) when continuing a SQL Command, in interactive mode
 -   Add optional WITH OPTIONS for INSERT statements to match LOAD INTO syntax
 -   kisql commands:
     -   \columns (\u)
@@ -75,9 +88,9 @@
     -   (\t) as a shortcut for \tables
 
 #### Changed
--   Changed DOWNLOAD syntax to: DOWNLOAD FILES <kifs-files> INTO <local-path> [WITH OPTIONS (<comma_seperated_key_value_list>)]
+-   Changed DOWNLOAD syntax to: `DOWNLOAD FILES <kifs-files> INTO <local-path> [WITH OPTIONS (<comma_seperated_key_value_list>)]`
 -   Retrun better errors and warnings from INSERT
--   Better handling of "\N" when it is the NULL string and "\" is the escape character, when reading CSV files
+-   Better handling of `\N` when it is the NULL string and `\` is the escape character, when reading CSV files
 -   Reduce output for CSV errors in files with extremely long lines
 
 #### Fixed
@@ -109,8 +122,8 @@
 ### Version 7.1.0.2 - 2020-09-25
 
 #### Added
--   Support for DisableAutoDiscovery and DisableFailover connection string options
--   Support for --disableAutoDiscovery and --disableFailover kisql command-line parameter
+-   Support for `DisableAutoDiscovery` and `DisableFailover` connection string options
+-   Support for `--disableAutoDiscovery` and `--disableFailover` kisql command-line parameter
 
 
 ### Version 7.1.0.0 - 2020-02-03
@@ -118,9 +131,9 @@
 #### Added
 -   Support for SET SCHEMA command
 --  Only valid when talking to a 7.1 GPUdb Server
--   Support for --schema kisql command-line parameter
--   Support for "schema" parameter on JDBC Connection string
--   Support for "schema" parameter to ODBC
+-   Support for `--schema` kisql command-line parameter
+-   Support for `schema` parameter on JDBC Connection string
+-   Support for `schema` parameter to ODBC
 
 
 ## Version 7.0
@@ -150,19 +163,19 @@
 ### Version 7.0.19.8 - 2020-10-01
 
 #### Fixed
--   SET USER support for external users (with leading "@")
+-   `SET USER` support for external users (with leading "@")
 
 
 ### Version 7.0.18 - 2020-06-05
 
 #### Added
--   Added META-INF/services/java.sql.Driver
+-   Added `META-INF/services/java.sql.Driver`
 
 
 ### Version 7.0.16.2 - 2020-06-02
 
 #### Changed
--   supportsBatchUpdates() metadata returns true
+-   `supportsBatchUpdates()` metadata returns true
 -   Trust Store password supports empty environment variable for blank password.
 
 
@@ -170,13 +183,13 @@
 
 #### Added
 -   Added support for multi-line SQL Procedures
--   Added RowsPerInsertion connection string parameter
--   Added \metadata and \version commands to kisql
+-   Added `RowsPerInsertion` connection string parameter
+-   Added `\metadata` and `\version` commands to kisql
 
 #### Changed
--   Removed support for password and truststorepwd command-line parameters (and synonyms)
--   Use KI_PWD environment variable, and user is prompted if KI_PWD is not set
--   Changed CSVParser to more closely match ODBC features
+-   Removed support for `password` and `truststorepwd` command-line parameters (and synonyms)
+-   Use `KI_PWD` environment variable, and user is prompted if `KI_PWD` is not set
+-   Changed `CSVParser` to more closely match ODBC features
 -   Updated reported metadata from JDBC Driver
 
 
@@ -189,15 +202,15 @@
 ### Version 7.0.14.4 - 2020-04-01
 
 #### Fixed
--   Fixed SslAllowHostMismatch by now using Java API to do this
+-   Fixed `SslAllowHostMismatch` by now using Java API to do this
 
 
 ### Version 7.0.14.2 - 2020-03-24
 
 #### Changed
--   Added support for TimeZoneOverride option to JDBC Connection string
--   Added --TimeZoneOverride option to kisql to pass this to JDBC
--   Added --listalltimezones to kisql to output the valid timezones
+-   Added support for `TimeZoneOverride` option to JDBC Connection string
+-   Added `--TimeZoneOverride` option to kisql to pass this to JDBC
+-   Added `--listalltimezones` to kisql to output the valid timezones
 
 
 ### Version 7.0.14.0 - 2020-03-18
@@ -218,24 +231,26 @@
 ### Version 7.0.12 - 2019-12-19
 
 #### Added
--   Having a Materialized View under construction will not cause problems when getting metadata about other tables
+-   Having a Materialized View under construction will not cause problems when
+    getting metadata about other tables
 
 #### Fixed
--   KiSQL now returns a linux status code indicating an error, if running SQL from a command-line or file and there is an error
+-   KiSQL now returns a linux status code indicating an error, if running SQL
+    from a command-line or file and there is an error
 
 ### Version 7.0.9 - 2019-10-31
 
 #### Added
--   Support for CREATE PROCEDURE
+-   Support for `CREATE PROCEDURE`
 -   Can now specify a URL as the first parameter on the JDBC Connection String
---  Can specify http or https, but these are optional
---  Starting with "//" is optional (when "http" or "https" are not specified)
+--  Can specify `http` or `https`, but these are optional
+--  Starting with `//` is optional (when `http` or `https` are not specified)
 --  May contain a path after the port, including slashes
 -   Version info now includes API version and KiSQL version
--   Documented the --version option in the KiSQL --help text
+-   Documented the `--version` option in the KiSQL `--help` text
 
 #### Fixed
--   Escape characters specified in INSERT FROM FILE parameters
+-   Escape characters specified in `INSERT FROM FILE` parameters
 -   Inserting into a result table
 -   Insert was under reporting number of added rows, when the insert took multiple batches
 -   Fix for inserting NULL as blank string in CSV for DECIMAL, DATE, DATETIME, TIME, IPV4 and ULONG columns
@@ -244,10 +259,10 @@
 ### Version 7.0.8 - 2019-09-17
 
 #### Added
--   Added support for getPrimaryKeys() and getIndexInfo
+-   Added support for `getPrimaryKeys()` and `getIndexInfo`
 -   Enhanced support for INSERT from FILE:
 --  Support globs to read from multiple files
---  Support default separator from file extension (.psv = '|', tsv = '\t', else ',')
+--  Support default separator from file extension (`.psv` = `|`, `tsv` = `\t`, else `,`)
 --  Support for comments in file
 --  Support for specifying the string to use for NULL
 --  Option to clear table before inserting
@@ -262,7 +277,7 @@
 ### Version 7.0.7 - 2019-08-13
 
 #### Added
--   Add support for SETUSER and related commands.
+-   Add support for `SETUSER` and related commands.
 
 ### Version 7.0.6 - 2019-07-??
 
@@ -275,12 +290,12 @@
 ### Version 7.0.5 - 2019-06-26
 
 #### Added
--   CombinePrepareAndExecute setting.
+-   `CombinePrepareAndExecute` setting.
 
 ### Version 7.0.4 - 2019-05-29
 
 #### Added
--   Support for PrimaryURL in KiSQL and JDBC Driver.
+-   Support for `PrimaryURL` in KiSQL and JDBC Driver.
 
 #### Changed
 -   Always show warnings.
@@ -296,8 +311,8 @@
 ### Version 7.0.3.0 - 2019-05-02
 
 #### Added
--   Added LIMIT parameter to support limiting the maximum number of rows returned by a query.
--   Added KISQL --connectionstring parameter.
+-   Added `LIMIT` parameter to support limiting the maximum number of rows returned by a query.
+-   Added KISQL `--connectionstring` parameter.
 
 #### Fixed
 -   Support for truststore parameter.
