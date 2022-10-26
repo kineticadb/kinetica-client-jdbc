@@ -2,7 +2,20 @@
 
 ## Version 7.1
 
-### Version 7.1.8.0 - 2022-08-04
+### Version 7.1.8.1 - 2022-10-26
+
+#### Added
+-   Support for `UID` and `PWD` connection string parameters
+-   New `CombineResults` connection string option to return a single affected rows count when executing multiple commands that all return an affected rows count
+-   New `FakeTransactions` connection string option to not return an error and ignore any transaction calls
+
+#### Fixed
+-   Throw error on Prepare, if table doesn't exist
+-   Do not attempt to use Key Lookup when not all shard keys are specified (when SK=PK)
+-   Query Parameters now retain their types
+
+
+### Version 7.1.8.0 - 2022-10-17
 
 #### Added
 -   Support for fast record retrieval with `KI_HINT_KEY_LOOKUP`
