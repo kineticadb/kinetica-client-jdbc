@@ -2,17 +2,39 @@
 
 ## Version 7.1
 
+### Version 7.1.8.2 - 2022-11-02
+
+#### Added
+-   Support for inequalities on indexed columns with key lookup
+    (i.e., `KI_HINT_KEY_LOOKUP`)
+-   Added the following connection string options (to make all statements act as
+    if the associated hint had been specified):
+    -  `UseKeyLookup` (for `KI_HINT_KEY_LOOKUP`)
+    -  `TruncateStrings` (for `KI_HINT_TRUNCATE_STRINGS`)
+    -  `UpdateOnExistingPk` (for `KI_HINT_UPDATE_ON_EXISTING_PK`)
+
+#### Fixed
+-   Throw error on Prepare, if table or specified columns don't exist
+-   Inserting duplicate PK's in the same batch with `UPDATE_ON_EXISTING_PK` is
+    now a warning and not an error
+
+
 ### Version 7.1.8.1 - 2022-10-26
 
 #### Added
--   Support for `UID` and `PWD` connection string parameters
--   New `CombineResults` connection string option to return a single affected rows count when executing multiple commands that all return an affected rows count
--   New `FakeTransactions` connection string option to not return an error and ignore any transaction calls
+-   Support for `UID` and `PWD` connection string options
+-   New `CombineResults` connection string option to return a single affected
+    rows count when executing multiple commands that all return an affected rows
+    count
+-   New `FakeTransactions` connection string option to not return an error and
+    ignore any transaction calls
 
 #### Fixed
--   Throw error on Prepare, if table doesn't exist
--   Do not attempt to use Key Lookup when not all shard keys are specified (when SK=PK)
+-   Do not attempt to use key lookup when not all shard keys are specified
+    (when SK=PK)
 -   Query Parameters now retain their types
+-   Connection String settings can include special characters using URL-style
+    encoding (e.g., `%3b` for semicolon)
 
 
 ### Version 7.1.8.0 - 2022-10-17
@@ -21,7 +43,7 @@
 -   Support for fast record retrieval with `KI_HINT_KEY_LOOKUP`
 -   New `DisableMultiheadInsert` setting to route all inserts to the head node
 -   Relocation of shaded dependencies
--   Improved reporting of errors for INSERTs
+-   Improved reporting of `INSERT` errors
 -   BLOB/CLOB support
 
 
@@ -66,14 +88,15 @@
 ### Version 7.1.7.1 - 2022-07-25
 
 #### Changed
--   Better caching and reuse of BulkInserter object
+-   Better caching and reuse of `BulkInserter` object
 
 
 ### Version 7.1.7.0 - 2022-06-15
 
 #### Added
--   kisql interactive mode now supports line editing, up arrow to see previous commands, etc.
--   Support multiple files for DOWNLOAD FILE
+-   KiSQL interactive mode now supports line editing, up arrow to see previous
+    commands, etc.
+-   Support multiple files for `DOWNLOAD FILE`
 
 #### Changed
 -   Improved insert performance
@@ -89,21 +112,29 @@
 ### Version 7.1.6.0 - 2022-01-27
 
 #### Added
--   kisql shows abbreviated prompt (i.e., `>`) when continuing a SQL Command, in interactive mode
--   Add optional WITH OPTIONS for INSERT statements to match LOAD INTO syntax
--   kisql commands:
-    -   \columns (\u)
-    -   \indices (\i)
-    -   \meta-test
-    -   \primarykeys (\k)
-    -   \procedures (\p)
-    -   \schemas (\s)
-    -   (\t) as a shortcut for \tables
+-   KiSQL shows abbreviated prompt (i.e., `>`) when continuing a SQL Command, in
+    interactive mode
+-   Add optional `WITH OPTIONS` for `INSERT` statements to match `LOAD INTO`
+    syntax
+-   KiSQL commands:
+    -   `\columns` (`\u`)
+    -   `\indices` (`\i`)
+    -   `\meta-test`
+    -   `\primarykeys` (`\k`)
+    -   `\procedures` (`\p`)
+    -   `\schemas` (`\s`)
+    -   `\t` (as a shortcut for `\tables`)
 
 #### Changed
--   Changed DOWNLOAD syntax to: `DOWNLOAD FILES <kifs-files> INTO <local-path> [WITH OPTIONS (<comma_seperated_key_value_list>)]`
--   Retrun better errors and warnings from INSERT
--   Better handling of `\N` when it is the NULL string and `\` is the escape character, when reading CSV files
+-   Changed `DOWNLOAD` syntax to:
+
+        DOWNLOAD FILES <kifs-files>
+        INTO <local-path>
+        [WITH OPTIONS (<comma_seperated_key_value_list>)]
+
+-   Retrun better errors and warnings from `INSERT`
+-   Better handling of `\N` when it is the NULL string and `\` is the escape
+    character, when reading CSV files
 -   Reduce output for CSV errors in files with extremely long lines
 
 #### Fixed
@@ -115,14 +146,15 @@
 ### Version 7.1.5.0 - 2021-10-13
 
 #### Added
--   UPLOAD and DOWNLOAD commands
+-   `UPLOAD` and `DOWNLOAD` commands
 -   Single-file executable versions of KiSQL, which can be run anywhere
 
 
 ### Version 7.1.3.0 - 2021-03-09
 
 #### Added
--   KiSQL output of very large and very small DOUBLE and FLOAT values now uses scientific notation
+-   KiSQL output of very large and very small DOUBLE and FLOAT values now uses
+    scientific notation
 
 
 ### Version 7.1.2.1 - 2021-01-29
@@ -135,16 +167,18 @@
 ### Version 7.1.0.2 - 2020-09-25
 
 #### Added
--   Support for `DisableAutoDiscovery` and `DisableFailover` connection string options
--   Support for `--disableAutoDiscovery` and `--disableFailover` kisql command-line parameter
+-   Support for `DisableAutoDiscovery` and `DisableFailover` connection string
+    options
+-   Support for `--disableAutoDiscovery` and `--disableFailover` KiSQL
+    command-line parameter
 
 
 ### Version 7.1.0.0 - 2020-02-03
 
 #### Added
--   Support for SET SCHEMA command
---  Only valid when talking to a 7.1 GPUdb Server
--   Support for `--schema` kisql command-line parameter
+-   Support for `SET SCHEMA` command -- only valid when connected to a 7.1
+    Kinetica instance
+-   Support for `--schema` KiSQL command-line parameter
 -   Support for `schema` parameter on JDBC Connection string
 -   Support for `schema` parameter to ODBC
 
