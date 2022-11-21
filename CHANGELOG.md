@@ -2,6 +2,16 @@
 
 ## Version 7.1
 
+### Version 7.1.8.3 - 2022-11-21
+
+#### Added
+-   New `DIRECTORY` option for `UPLOAD` and `DOWNLOAD` commands
+-   Support for `NoSync` connection string option to override HA Sync Mode
+
+#### Changed
+-   `FILE` and `DIRECTORY` are now optional on `UPLOAD` and `DOWNLOAD` commands
+
+
 ### Version 7.1.8.2 - 2022-11-02
 
 #### Added
