@@ -2,6 +2,13 @@
 
 ## Version 7.1
 
+### Version 7.1.8.4 - 2022-11-30
+
+#### Changed
+-   Updated underlying Java API
+-   Reporting of Kinetica `DECIMAL` type as SQL `DECIMAL(18,4)`
+
+
 ### Version 7.1.8.3 - 2022-11-21
 
 #### Added
