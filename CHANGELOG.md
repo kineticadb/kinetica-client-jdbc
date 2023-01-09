@@ -2,6 +2,16 @@
 
 ## Version 7.1
 
+### Version 7.1.8.5 - 2023-01-08
+
+#### Added
+-   Support for $ style query parameters (e.g., "$1", "$2", etc.)
+-   Support for BOOLEAN columns and data
+
+#### Fixed
+-   Support for BigDecimal query parameters
+
+
 ### Version 7.1.8.4 - 2022-11-30
 
 #### Changed
