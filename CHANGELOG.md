@@ -2,6 +2,15 @@
 
 ## Version 7.1
 
+### Version 7.1.8.6 - 2023-01-27
+
+#### Added
+-   Support for `KI_HINT_IGNORE_EXISTING_PK`
+-   Added `IgnoreExistingPk` connection string options to make all statements act as
+    if `KI_HINT_IGNORE_EXISTING_PK` had been specified
+-   Streamlined KiSQL output
+
+
 ### Version 7.1.8.5 - 2023-01-08
 
 #### Added
