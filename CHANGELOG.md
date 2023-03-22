@@ -2,6 +2,20 @@
 
 ## Version 7.1
 
+### Version 7.1.9.0 - 2023-03-19
+
+#### Added
+-   Added `BypassSslCertCheck` connection string option
+-   Added `bypassSslCertCheck` KiSQL option
+
+#### Changed
+-   Updated underlying Java API
+
+#### Fixed
+-   Support for NULL values in query parameters (for non-multi-head-insert statements)
+-   Truncate Strings not handling Unicode characters properly
+
+
 ### Version 7.1.8.7 - 2023-02-17
 
 #### Changed

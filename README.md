@@ -62,7 +62,7 @@ For the full parameter set, see
 
 | Parameter              | Description
 | :---                   | :---
-| `SslAllowHostMismatch` | Allow (`1`) or disallow (`0`) the Kinetica certificate host name and server host name to be different
+| `BypassSslCertCheck`   | Allow (`1`) or disallow (`0`) the Kinetica certificate host name and server host name to be different
 | `SslCACertPassword`    | Password to the certificate store specified by either `SslCACertPath` or `TrustedStorePath`
 | `SslCACertPath`        | Path to client's trust store, used to validate the certificate from the Kinetica server
 | `TrustedStorePath`     | Path to client's trust store, used to validate the certificate from the Kinetica server (override for `SslCACertPath` parameter)
