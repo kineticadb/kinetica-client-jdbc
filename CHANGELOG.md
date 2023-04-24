@@ -2,6 +2,27 @@
 
 ## Version 7.1
 
+### Version 7.1.9.1 - 2023-04-23
+
+#### Added
+-   Added the following connection string options:
+    - `ErrorMode` (values: `Permissive`, `Skip`, `Abort`)
+    - `FileReadCommentChar`
+    - `FileReadDelimiter`
+    - `FileReadEscapeChar`
+    - `FileReadHasHeader`
+    - `FileReadInitialClear`
+    - `FileReadLimit`
+    - `FileReadNullString`
+    - `FileReadQuoteChar`
+    - `FileReadSkip`
+    - `ImpersonateUser`
+    - `UseApproxCountDistinct`
+
+#### Changed
+-   Updated underlying Java API
+
+
 ### Version 7.1.9.0 - 2023-03-19
 
 #### Added
