@@ -2,6 +2,12 @@
 
 ## Version 7.1
 
+### Version 7.1.9.4 - 2023-05-09
+
+#### Fixed
+-   Removed setting of impersonate header when impersonate user is blank
+
+
 ### Version 7.1.9.3 - 2023-04-30
 
 #### Changed
