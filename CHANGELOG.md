@@ -2,6 +2,19 @@
 
 ## Version 7.1
 
+### Version 7.1.9.5 - 2023-06-08
+
+#### Added
+-   UUID support
+
+#### Changed
+-   Updated underlying Java API
+
+#### Fixed
+-   Issue with ingesting Byte column data
+-   kisql password prompting (on some terminals)
+
+
 ### Version 7.1.9.4 - 2023-05-09
 
 #### Fixed
