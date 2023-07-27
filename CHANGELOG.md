@@ -2,6 +2,12 @@
 
 ## Version 7.1
 
+### Version 7.1.9.6 - 2023-07-26
+
+#### Fixed
+-   SET USER and EXECUTE AS USER allow more characters in user's name.
+
+
 ### Version 7.1.9.5 - 2023-06-08
 
 #### Added
