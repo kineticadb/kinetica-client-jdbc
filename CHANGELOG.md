@@ -2,6 +2,12 @@
 
 ## Version 7.1
 
+### Version 7.1.9.7 - 2023-07-31
+
+#### Fixed
+-   Support for large file downloads
+
+
 ### Version 7.1.9.6 - 2023-07-26
 
 #### Fixed
