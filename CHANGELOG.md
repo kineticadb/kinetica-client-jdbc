@@ -2,10 +2,17 @@
 
 ## Version 7.1
 
+### Version 7.1.9.8 - 2023-08-12
+
+#### Changed
+-   Updated underlying Java API to 7.1.9.6
+-   Better handling when /show/tables returns a blank attribute_index
+
+
 ### Version 7.1.9.7 - 2023-07-31
 
-#### Fixed
--   Support for large file downloads
+#### Changed
+-   Updated underlying Java API to 7.1.9.5
 
 
 ### Version 7.1.9.6 - 2023-07-26
