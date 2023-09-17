@@ -2,6 +2,16 @@
 
 ## Version 7.1
 
+### Version 7.1.9.9 - 2023-09-17
+
+#### Changed
+-   Support more options in WITH OPTIONS on INSERT statements
+-   Updated underlying Java API to 7.1.9.7
+
+#### Fixed
+-   Bug in DOWNLOAD FILE
+
+
 ### Version 7.1.9.8 - 2023-08-12
 
 #### Changed
