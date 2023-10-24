@@ -2,6 +2,12 @@
 
 ## Version 7.1
 
+### Version 7.1.9.13 - 2023-10-24
+
+#### Added
+-   Added "disableSnappy" option for JDBC and kisql
+
+
 ### Version 7.1.9.12 - 2023-10-17
 
 #### Changed
