@@ -2,6 +2,18 @@
 
 ## Version 7.1
 
+### Version 7.1.9.14 - 2023-12-03
+
+#### Added
+-   Support for Connection.getSchema()
+
+#### Changed
+-   Updated underlying Java API to 7.1.9.12
+
+#### Fixed
+-   Inserting TIMESTAMP column data using string formatted times with fractions of seconds
+
+
 ### Version 7.1.9.13 - 2023-10-24
 
 #### Added
