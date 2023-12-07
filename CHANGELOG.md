@@ -2,6 +2,12 @@
 
 ## Version 7.0
 
+### Version 7.0.20.8 - 2023-12-06
+
+#### Changed
+-   Updated underlying API version
+
+
 ### Version 7.0.20.7 - 2022-11-30
 
 #### Changed
