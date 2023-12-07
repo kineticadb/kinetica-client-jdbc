@@ -2,6 +2,12 @@
 
 ## Version 7.1
 
+### Version 7.1.9.15 - 2023-12-07
+
+#### Changed
+-   Updated underlying Java API to 7.1.9.13
+
+
 ### Version 7.1.9.14 - 2023-12-03
 
 #### Added
@@ -357,6 +363,42 @@
 
 
 ## Version 7.0
+
+### Version 7.0.20.8 - 2023-12-06
+
+#### Changed
+-   Updated underlying API version
+
+
+### Version 7.0.20.7 - 2022-11-30
+
+#### Changed
+-   Updated underlying API version
+
+
+### Version 7.0.20.6 - 2022-10-04
+
+#### Changed
+-   Updated underlying API version
+
+
+### Version 7.0.20.5 - 2022-07-28
+
+#### Added
+-   Improved insert performance
+
+
+### Version 7.0.20.4 - 2022-07-25
+
+#### Fixed
+-   Issue with thread over-accumulation when inserting data
+
+
+### Version 7.0.20.3 - 2022-06-08
+
+#### Changed
+-   Updated dependent library versions
+
 
 ### Version 7.0.20.2 - 2022-04-01
 
