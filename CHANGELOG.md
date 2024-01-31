@@ -2,6 +2,12 @@
 
 ## Version 7.1
 
+### Version 7.1.9.17 - 2024-01-31
+
+#### Fixed
+-   Fixed getting user's default schema to support external users
+
+
 ### Version 7.1.9.16 - 2023-12-21
 
 #### Changed
