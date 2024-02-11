@@ -1,5 +1,13 @@
 # Kinetica JDBC/KiSQL
 
+## Version 7.2
+
+### Version 7.2.0.0 - 2024-02-11
+
+#### Changed
+-   Updated underlying Java API to 7.2.0.0
+
+
 ## Version 7.1
 
 ### Version 7.1.9.17 - 2024-01-31

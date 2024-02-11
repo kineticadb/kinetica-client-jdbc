@@ -4,9 +4,9 @@
 <h5 align="center" style="margin:0px">
 	<a href="https://www.kinetica.com/">Website</a>
 	|
-	<a href="https://docs.kinetica.com/7.1/">Docs</a>
+	<a href="https://docs.kinetica.com/7.2/">Docs</a>
 	|
-	<a href="https://docs.kinetica.com/7.1/connectors/sql_guide/">JDBC Docs</a>
+	<a href="https://docs.kinetica.com/7.2/connectors/sql_guide/">JDBC Docs</a>
 	|
 	<a href="https://join.slack.com/t/kinetica-community/shared_invite/zt-1bt9x3mvr-uMKrXlSDXfy3oU~sKi84qg">Community Slack</a>   
 </h5>
@@ -29,15 +29,17 @@ The Kinetica JDBC Driver supports connections from a wide array of JDBC-aware
 applications to the Kinetica database.
 
 
-Note that the version of the driver must match that of the database; e.g., the
-7.1 version of the driver is interoperable with any Kinetica 7.1.X.Y database.
+Ideally, the version of the driver must match that of the database; e.g., the
+7.2 version of the driver is interoperable with any Kinetica 7.2.X.Y database.
+However, the 7.2 driver may be compatible with 7.1 database instances for most
+use cases.
 
 
 ## Configure
 
 Kinetica JDBC driver JAR:
 
-    kinetica-jdbc-7.1.<X>.<Y>-jar-with-dependencies.jar
+    kinetica-jdbc-7.2.<X>.<Y>-jar-with-dependencies.jar
 
 Driver class:
 
@@ -47,7 +49,7 @@ Driver class:
 ### Common Connection Parameters
 
 For the full parameter set, see
-[ODBC/JDBC Connection Guide](https://docs.kinetica.com/7.1/connectors/sql_guide/#configuration).
+[ODBC/JDBC Connection Guide](https://docs.kinetica.com/7.2/connectors/sql_guide/#configuration).
 
 | Parameter      | Description
 | :---           | :---
@@ -94,8 +96,8 @@ parameter, and the URL of the one to use first for the `PrimaryURL` parameter:
 
 
 ## Documentation
-- [Full Documentation](https://docs.kinetica.com/7.1/)
-- [ODBC/JDBC Connection Guide](https://docs.kinetica.com/7.1/connectors/sql_guide/)
+- [Full Documentation](https://docs.kinetica.com/7.2/)
+- [ODBC/JDBC Connection Guide](https://docs.kinetica.com/7.2/connectors/sql_guide/)
 
 
 ## Support
