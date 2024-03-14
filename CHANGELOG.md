@@ -2,6 +2,18 @@
 
 ## Version 7.2
 
+### Version 7.2.0.2 - 2024-03-13
+
+#### Changed
+-   Added support for setArray() for query parameters
+-   Increased connection timeout from ~1 to 20 seconds to account for
+    connections over high-traffic and public networks
+-   Upgraded Snappy library from 1.1.10.4 to 1.1.10.5
+
+#### Fixed
+-   Outputting floats in scientific notation with negative-two-digit exponents
+
+
 ### Version 7.2.0.1 - 2024-02-27
 
 #### Changed
@@ -15,6 +27,25 @@
 
 
 ## Version 7.1
+
+### Version 7.1.9.19 - 2024-03-13
+
+#### Changed
+-   Increased connection timeout from ~1 to 20 seconds to account for
+    connections over high-traffic and public networks
+-   Upgraded Snappy library from 1.1.10.4 to 1.1.10.5
+-   Updated underlying Java API to 7.1.9.16
+
+#### Fixed
+-   Outputting floats in scientific notation with negative-two-digit exponents
+
+
+### Version 7.1.9.18 - 2024-02-29
+
+#### Changed
+-   Upgraded Apache HTTPClient5 library from 5.3 to 5.3.1
+-   Updated underlying Java API to 7.1.9.15
+
 
 ### Version 7.1.9.17 - 2024-01-31
 
