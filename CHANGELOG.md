@@ -2,6 +2,18 @@
 
 ## Version 7.2
 
+### Version 7.2.0.3 - 2024-03-20
+
+#### Added
+-   Support for unsigned long type in arrays
+
+#### Changed
+-   Updated underlying Java API to 7.2.0.3
+
+#### Fixed
+-   Various timezone-related issues
+
+
 ### Version 7.2.0.2 - 2024-03-13
 
 #### Changed
@@ -27,6 +39,12 @@
 
 
 ## Version 7.1
+
+### Version 7.1.9.20 - 2024-03-20
+
+#### Changed
+-   Updated underlying Java API to 7.1.9.16
+
 
 ### Version 7.1.9.19 - 2024-03-13
 
