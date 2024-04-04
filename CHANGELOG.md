@@ -2,10 +2,19 @@
 
 ## Version 7.1
 
+### Version 7.1.9.21 - 2024-04-04
+
+#### Changed
+-   Lowered default server connection timeout to 5 seconds
+-   Made server connection timeout (user-specified or default) govern connection
+    timeouts in all cases of initially connecting to a server
+-   Updated underlying Java API to 7.1.9.18
+
+
 ### Version 7.1.9.20 - 2024-03-20
 
 #### Changed
--   Updated underlying Java API to 7.1.9.16
+-   Updated underlying Java API to 7.1.9.17
 
 
 ### Version 7.1.9.19 - 2024-03-13
