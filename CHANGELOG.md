@@ -2,6 +2,13 @@
 
 ## Version 7.1
 
+### Version 7.1.9.22 - 2024-04-16
+
+#### Fixed
+-   TimeZoneOverride setting
+-   Output now works with TimeZone's default
+
+
 ### Version 7.1.9.21 - 2024-04-04
 
 #### Changed
