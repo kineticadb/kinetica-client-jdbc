@@ -2,6 +2,16 @@
 
 ## Version 7.2
 
+### Version 7.2.0.6 - 2024-05-16
+
+#### Added
+-   Added --stopOnFirstError option for kisql
+
+#### Fixed
+-   Thread-safety with JDBC Date fields
+-   getTime(column).toString() was not showing milliseconds
+
+
 ### Version 7.2.0.5 - 2024-04-16
 
 #### Added
@@ -58,6 +68,16 @@
 
 
 ## Version 7.1
+
+### Version 7.1.10.0 - 2024-05-16
+
+#### Added
+-   Added --stopOnFirstError option for kisql
+
+#### Fixed
+-   Thread-safety with JDBC Date fields
+-   getTime(column).toString() was not showing milliseconds
+
 
 ### Version 7.1.9.22 - 2024-04-16
 
