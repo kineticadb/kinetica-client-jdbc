@@ -2,6 +2,17 @@
 
 ## Version 7.2
 
+### Version 7.2.0.7 - 2024-06-07
+
+#### Changed
+-   Better parsing of multi-line SQL terminating semicolon
+-   Updated underlying Java API to 7.2.0.5
+
+#### Fixed
+-   Returned Time and Timestamp objects will now always output 3 milliseconds in their toString() methods
+-   Out-of-memory error when downloading large files
+
+
 ### Version 7.2.0.6 - 2024-05-16
 
 #### Added
@@ -68,6 +79,16 @@
 
 
 ## Version 7.1
+
+### Version 7.1.10.1 - 2024-06-07
+
+#### Changed
+-   Updated underlying Java API to 7.1.10.1
+
+#### Fixed
+-   Returned Time and Timestamp objects will now always output 3 milliseconds in their toString() methods
+-   Out-of-memory error when downloading large files
+
 
 ### Version 7.1.10.0 - 2024-05-16
 
