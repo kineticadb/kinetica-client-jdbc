@@ -2,6 +2,12 @@
 
 ## Version 7.1
 
+### Version 7.1.10.3 - 2024-08-02
+
+#### Fixed
+-   Dependency-reduced POM for `fullshaded` JAR overwriting POM for unshaded JAR
+
+
 ### Version 7.1.10.2 - 2024-07-15
 
 #### Changed
