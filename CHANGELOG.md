@@ -2,6 +2,12 @@
 
 ## Version 7.1
 
+### Version 7.1.10.4 - 2024-08-07
+
+#### Changed
+-   Publishing to Maven Central Repository
+
+
 ### Version 7.1.10.3 - 2024-08-02
 
 #### Fixed
