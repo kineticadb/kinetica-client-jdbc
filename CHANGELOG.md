@@ -2,6 +2,18 @@
 
 ## Version 7.2
 
+### Version 7.2.1.0 - 2024-09-08
+
+#### Added
+-   OAuth2 authentication support
+
+#### Changed
+-   Updated underlying Java API to 7.2.1.0
+
+#### Fixed
+-   Snappy error for `fullshaded` JAR
+
+
 ### Version 7.2.0.7 - 2024-06-07
 
 #### Changed
@@ -79,6 +91,31 @@
 
 
 ## Version 7.1
+
+### Version 7.1.10.5 - 2024-09-08
+
+#### Fixed
+-   Snappy error for `fullshaded` JAR
+
+
+### Version 7.1.10.4 - 2024-08-07
+
+#### Changed
+-   Publishing to Maven Central Repository
+
+
+### Version 7.1.10.3 - 2024-08-02
+
+#### Fixed
+-   Dependency-reduced POM for `fullshaded` JAR overwriting POM for unshaded JAR
+
+
+### Version 7.1.10.2 - 2024-07-15
+
+#### Changed
+-   Several security-related dependency updates
+-   Updated underlying Java API to 7.1.10.2
+
 
 ### Version 7.1.10.1 - 2024-06-07
 
