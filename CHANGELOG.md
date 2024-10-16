@@ -2,10 +2,25 @@
 
 ## Version 7.2
 
-### Version 7.2.1.0 - 2024-09-08
+### Version 7.2.2.0 - 2024-10-15
 
 #### Added
 -   OAuth2 authentication support
+
+#### Changed
+-   Updated underlying Java API to 7.2.2.0
+-   Modified POM for publishing to Maven Central Repository
+-   Upgraded Jackson core library to 2.17.1
+-   Downgraded Logback library to 1.3.14
+-   Upgraded SLF4j library to 2.0.13
+
+#### Fixed
+-   Issue with `fullshaded` driver terminating with no linked Snappy library
+-   Issue with default string column values overwriting blank user input
+-   Issue with `CREATE PROCEDURE` permission commands not being parsed properly
+
+
+### Version 7.2.1.0 - 2024-09-08
 
 #### Changed
 -   Updated underlying Java API to 7.2.1.0
