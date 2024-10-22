@@ -2,6 +2,13 @@
 
 ## Version 7.2
 
+### Version 7.2.2.1 - 2024-10-22
+
+#### Changed
+-   Reduced endpoint call overhead for connections and `RecordRetriever`
+-   Updated underlying Java API to 7.2.2.1
+
+
 ### Version 7.2.2.0 - 2024-10-15
 
 #### Added
