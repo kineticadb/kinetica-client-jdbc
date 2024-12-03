@@ -2,6 +2,16 @@
 
 ## Version 7.2
 
+### Version 7.2.2.4 - 2024-12-03
+
+#### Fixed
+-   Queries with query parameters only returning first page of results
+-   Schema support for KiSQL command-invoked catalog queries
+
+#### Removed
+-   Support for time zone override
+
+
 ### Version 7.2.2.3 - 2024-10-29
 
 #### Added
