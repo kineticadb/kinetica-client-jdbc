@@ -2,6 +2,18 @@
 
 ## Version 7.2
 
+### Version 7.2.2.5 - 2024-12-17
+
+#### Added
+-   Support for key lookups returning a subset of a table's columns with fewer
+    lookup restrictions when using `KI_HINT_KEY_LOOKUP` hint or `UseKeyLookup`
+    JDBC option
+
+#### Changed
+-   Inserting values with functions like `NOW()` is now handled by the JDBC
+    driver via multi-head insert
+
+
 ### Version 7.2.2.4 - 2024-12-03
 
 #### Fixed
