@@ -2,6 +2,20 @@
 
 ## Version 7.2
 
+### Version 7.2.2.6 - 2025-01-31
+
+#### Added
+-   Support for JDBC getLargeUpdateCount()
+-   Parameters for modifying the initial connection per-server timeout and
+    overall connection negotiation timeout in seconds
+
+#### Changed
+-   Updated underlying Java API to 7.2.2.5
+
+#### Fixed
+-   KiSQL now correctly reports counts of changed rows when greater than 2 billion
+
+
 ### Version 7.2.2.5 - 2024-12-17
 
 #### Added
@@ -10,6 +24,7 @@
     JDBC option
 
 #### Changed
+-   Updated underlying Java API to 7.2.2.4
 -   Inserting values with functions like `NOW()` is now handled by the JDBC
     driver via multi-head insert
 
@@ -95,7 +110,7 @@
 ### Version 7.2.0.6 - 2024-05-16
 
 #### Added
--   Added --stopOnFirstError option for kisql
+-   Added --stopOnFirstError option for KiSQL
 
 #### Fixed
 -   Thread-safety with JDBC Date fields
@@ -197,7 +212,7 @@
 ### Version 7.1.10.0 - 2024-05-16
 
 #### Added
--   Added --stopOnFirstError option for kisql
+-   Added --stopOnFirstError option for KiSQL
 
 #### Fixed
 -   Thread-safety with JDBC Date fields
@@ -278,7 +293,7 @@
 ### Version 7.1.9.13 - 2023-10-24
 
 #### Added
--   Added "disableSnappy" option for JDBC and kisql
+-   Added "disableSnappy" option for JDBC and KiSQL
 
 
 ### Version 7.1.9.12 - 2023-10-17
@@ -338,7 +353,7 @@
 
 #### Fixed
 -   Issue with ingesting Byte column data
--   kisql password prompting (on some terminals)
+-   KiSQL password prompting (on some terminals)
 
 
 ### Version 7.1.9.4 - 2023-05-09
@@ -701,7 +716,7 @@
 #### Added
 -   Added support for multi-line SQL Procedures
 -   Added `RowsPerInsertion` connection string parameter
--   Added `\metadata` and `\version` commands to kisql
+-   Added `\metadata` and `\version` commands to KiSQL
 
 #### Changed
 -   Removed support for `password` and `truststorepwd` command-line parameters (and synonyms)
@@ -726,8 +741,8 @@
 
 #### Changed
 -   Added support for `TimeZoneOverride` option to JDBC Connection string
--   Added `--TimeZoneOverride` option to kisql to pass this to JDBC
--   Added `--listalltimezones` to kisql to output the valid timezones
+-   Added `--TimeZoneOverride` option to KiSQL to pass this to JDBC
+-   Added `--listalltimezones` to KiSQL to output the valid timezones
 
 
 ### Version 7.0.14.0 - 2020-03-18
@@ -736,7 +751,7 @@
 -   JDBC now returns times in UTC/GMT
 
 #### Fixed
--   kisql to use the timezone parameter correctly
+-   KiSQL to use the timezone parameter correctly
 
 
 ### Version 7.0.12.1 - 2020-03-05
