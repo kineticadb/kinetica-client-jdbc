@@ -2,6 +2,14 @@
 
 ## Version 7.2
 
+### Version 7.2.2.7 - 2025-02-04
+
+#### Changed
+-   Updated underlying Java API to 7.2.2.6
+-   Switched read timeout on system status checks to the configured server
+    connection timeout
+
+
 ### Version 7.2.2.6 - 2025-01-31
 
 #### Added
