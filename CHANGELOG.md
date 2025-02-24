@@ -2,6 +2,16 @@
 
 ## Version 7.2
 
+### Version 7.2.2.8 - 2025-02-24
+
+#### Added
+-   More error types supported in retrying connections
+
+#### Changed
+-   Updated underlying Java API to 7.2.2.7
+-   Upgraded Logback library to 1.3.15
+
+
 ### Version 7.2.2.7 - 2025-02-04
 
 #### Changed
