@@ -2,6 +2,15 @@
 
 ## Version 7.2
 
+### Version 7.2.2.9 - 2025-03-27
+
+#### Added
+-   Retrying connections in case of HTTP 502 responses
+
+#### Changed
+-   Updated underlying Java API to 7.2.2.8
+
+
 ### Version 7.2.2.8 - 2025-02-24
 
 #### Added
