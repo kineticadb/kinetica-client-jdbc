@@ -2,6 +2,15 @@
 
 ## Version 7.2
 
+### Version 7.2.2.10 - 2025-04-17
+
+#### Added
+-   Handled connection scenario where primary cluster is initially down.
+
+#### Changed
+-   Updated underlying Java API to 7.2.2.9
+
+
 ### Version 7.2.2.9 - 2025-03-27
 
 #### Added
