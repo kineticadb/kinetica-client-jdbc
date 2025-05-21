@@ -2,6 +2,32 @@
 
 ## Version 7.2
 
+### Version 7.2.2.11 - 2025-05-20
+
+#### Added
+-   Added support for the HA Replication hints when doing an INSERT:
+    - `KI_HINT_REPL_NONE`
+    - `KI_HINT_REPL_SYNC`
+    - `KI_HINT_REPL_ASYNC`
+    - `KI_HINT_REPL_SYNC_PARALLEL`
+    - `KI_HINT_REPL_ASYNC_PARALLEL`
+-   Added `Replication` connection string option.  Supported values are:
+    - `NONE`
+    - `SYNC`
+    - `ASYNC`
+    - `SYNC_PARALLEL`
+    - `ASYNC_PARALLEL`
+
+#### Changed
+-   `NoSync` connection string option is now deprecated, but still supported.  Use new `Replication=NONE` option instead.
+-   Simplified design of fail-back poller.
+
+#### Fixed
+-   Handling of connection & fail-back when server blocks connections while
+    processing HA-queued requests.
+-   Fail-back poller not initiating after first fail-over/fail-back.
+
+
 ### Version 7.2.2.10 - 2025-04-17
 
 #### Added
@@ -209,6 +235,12 @@
 
 
 ## Version 7.1
+
+### Version 7.1.10.6 - 2025-04-29
+
+#### Added
+-   Failover support for a cluster starting up and draining its HA queue
+
 
 ### Version 7.1.10.5 - 2024-09-08
 
