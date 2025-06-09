@@ -2,6 +2,17 @@
 
 ## Version 7.2
 
+### Version 7.2.2.12 - 2025-06-08
+
+#### Added
+-   Added HA connection string options:
+    - `FailbackPollInterval`:  Seconds to wait between fail-back service polls
+      of the primary cluster
+    - `FailoverOrder`:  Determines whether the cluster failed over to is
+      selected randomly or in the sequence specified by the user.  Valid values
+      are `RANDOM` and `SEQUENTIAL`.
+
+
 ### Version 7.2.2.11 - 2025-05-20
 
 #### Added
