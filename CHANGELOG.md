@@ -2,6 +2,13 @@
 
 ## Version 7.2
 
+### Version 7.2.2.13 - 2025-08-18
+
+#### Fixed
+-   Issue with query iterating over a batch size that is greater
+    than the configured `max_get_records_size` on the server
+
+
 ### Version 7.2.2.12 - 2025-06-08
 
 #### Added
