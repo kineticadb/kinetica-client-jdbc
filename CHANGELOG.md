@@ -2,6 +2,16 @@
 
 ## Version 7.2
 
+### Version 7.2.2.14 - 2025-08-24
+
+#### Changed
+-   Improved forward-compatibility for new `DECIMAL` type
+-   Upgraded Apache Commons Lang3 library to 3.18.0
+
+#### Changed
+-   Updated underlying Java API to 7.2.2.13
+
+
 ### Version 7.2.2.13 - 2025-08-18
 
 #### Fixed
