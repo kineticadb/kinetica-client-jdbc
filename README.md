@@ -49,7 +49,7 @@ Driver class:
 ### Common Connection Parameters
 
 For the full parameter set, see
-[ODBC/JDBC Connection Guide](https://docs.kinetica.com/7.2/connectors/sql_guide/#configuration).
+[ODBC/JDBC Connection Guide](https://docs.kinetica.com/7.2/connectors/sql_guide/#odbc-jdbc-configuration).
 
 | Parameter      | Description
 | :---           | :---

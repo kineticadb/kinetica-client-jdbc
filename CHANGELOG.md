@@ -2,6 +2,18 @@
 
 ## Version 7.2
 
+### Version 7.2.3.0 - 2025-09-03
+
+#### Changed
+-   Improved efficiency of dropping temporary tables.
+-   Improved data type reporting.
+-   Updated underlying Java API to 7.2.3.0.
+
+#### Fixed
+-   Issue creating an external table from a remote query containing a WKT type.
+-   Update count reported by `getLargeUpdateCount()`.
+
+
 ### Version 7.2.2.14 - 2025-08-24
 
 #### Changed
