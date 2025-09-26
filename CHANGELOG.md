@@ -2,6 +2,15 @@
 
 ## Version 7.2
 
+### Version 7.2.3.1 - 2025-09-26
+
+#### Added
+-   Support for new 12-byte `DECIMAL` type
+
+#### Fixed
+-   Issue handling the response of a query using `KI_HINT_KEY_LOOKUP`.
+
+
 ### Version 7.2.3.0 - 2025-09-03
 
 #### Changed
@@ -14,13 +23,20 @@
 -   Update count reported by `getLargeUpdateCount()`.
 
 
+### Version 7.2.2.15 - 2025-09-03
+
+#### Fixed
+-   Handling of multi-part KiFS upload that is too big for the target directory.
+
+#### Changed
+-   Updated underlying Java API to 7.2.2.14
+
+
 ### Version 7.2.2.14 - 2025-08-24
 
 #### Changed
 -   Improved forward-compatibility for new `DECIMAL` type
 -   Upgraded Apache Commons Lang3 library to 3.18.0
-
-#### Changed
 -   Updated underlying Java API to 7.2.2.13
 
 
