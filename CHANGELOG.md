@@ -2,6 +2,13 @@
 
 ## Version 7.2
 
+### Version 7.2.3.2 - 2025-10-07
+
+#### Changed
+-   Switched retry handler to retry on higher-level `SocketException` instead of
+    lower-level `ConnectException` & `NoRouteToHostException`
+
+
 ### Version 7.2.3.1 - 2025-09-26
 
 #### Added
@@ -21,6 +28,13 @@
 #### Fixed
 -   Issue creating an external table from a remote query containing a WKT type.
 -   Update count reported by `getLargeUpdateCount()`.
+
+
+### Version 7.2.2.16 - 2025-10-07
+
+#### Changed
+-   Switched retry handler to retry on higher-level `SocketException` instead of
+    lower-level `ConnectException` & `NoRouteToHostException`
 
 
 ### Version 7.2.2.15 - 2025-09-03
