@@ -2,17 +2,33 @@
 
 ## Version 7.2
 
+### Version 7.2.3.3 - 2025-11-18
+
+#### Added
+-   Complete support for 12-byte `DECIMAL` data type
+-   Support for multiple sets of parameterized query parameters
+
+#### Changed
+-   Updated underlying Java API to 7.2.3.2.
+
+#### Fixed
+-   Preservation of HA failover order in user-given URLs
+-   Check of HA queue draining status on fail-back
+
+
 ### Version 7.2.3.2 - 2025-10-07
 
 #### Changed
 -   Switched retry handler to retry on higher-level `SocketException` instead of
     lower-level `ConnectException` & `NoRouteToHostException`
+-   Updated underlying Java API to 7.2.3.1.
 
 
 ### Version 7.2.3.1 - 2025-09-26
 
 #### Added
 -   Support for new 12-byte `DECIMAL` type
+
 
 #### Fixed
 -   Issue handling the response of a query using `KI_HINT_KEY_LOOKUP`.
@@ -30,11 +46,21 @@
 -   Update count reported by `getLargeUpdateCount()`.
 
 
+### Version 7.2.2.17 - 2025-11-12
+
+#### Fixed
+-   Preservation of HA failover order in user-given URLs
+
+#### Changed
+-   Updated underlying Java API to 7.2.2.16
+
+
 ### Version 7.2.2.16 - 2025-10-07
 
 #### Changed
 -   Switched retry handler to retry on higher-level `SocketException` instead of
     lower-level `ConnectException` & `NoRouteToHostException`
+-   Updated underlying Java API to 7.2.2.15
 
 
 ### Version 7.2.2.15 - 2025-09-03
