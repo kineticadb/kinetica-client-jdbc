@@ -2,14 +2,14 @@
 
 ## Version 7.2
 
-### Version 7.2.3.3 - 2025-11-18
+### Version 7.2.3.3 - 2025-11-19
 
 #### Added
 -   Complete support for 12-byte `DECIMAL` data type
 -   Support for multiple sets of parameterized query parameters
 
 #### Changed
--   Updated underlying Java API to 7.2.3.2.
+-   Updated underlying Java API to 7.2.3.3.
 
 #### Fixed
 -   Preservation of HA failover order in user-given URLs
