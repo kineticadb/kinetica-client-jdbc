@@ -2,39 +2,53 @@
 
 ## Version 7.2
 
+### Version 7.2.3.5 - 2025-12-02
+
+#### Changed
+-   Improved network overhead of inserts.
+-   Avoided unnecessary conversion of binded parameterized data to string.
+-   Updated underlying Java API to 7.2.3.5.
+
+#### Fixed
+-   Column types being returned with non-SQL type names in metadata.
+-   Metadata not being returned in the proper order per JDBC spec.
+-   Used-specified fetch size not being honored in result sets.
+-   `Float` & `Double` data not being trimmed before inserting.
+
+
 ### Version 7.2.3.4 - 2025-11-21
 
 #### Changed
--   Improved multi-threaded performance of multi-head ingest
+-   Improved multi-threaded performance of multi-head ingest.
 -   Updated underlying Java API to 7.2.3.4.
 
 
 ### Version 7.2.3.3 - 2025-11-19
 
 #### Added
--   Complete support for 12-byte `DECIMAL` data type
--   Support for multiple sets of parameterized query parameters
+-   Complete support for 12-byte `DECIMAL` data type.
+-   Support for multiple sets of parameterized query parameters.
 
 #### Changed
 -   Updated underlying Java API to 7.2.3.3.
 
 #### Fixed
--   Preservation of HA failover order in user-given URLs
--   Check of HA queue draining status on fail-back
+-   Preservation of HA failover order in user-given URLs.
+-   Check of HA queue draining status on fail-back.
 
 
 ### Version 7.2.3.2 - 2025-10-07
 
 #### Changed
 -   Switched retry handler to retry on higher-level `SocketException` instead of
-    lower-level `ConnectException` & `NoRouteToHostException`
+    lower-level `ConnectException` & `NoRouteToHostException`.
 -   Updated underlying Java API to 7.2.3.1.
 
 
 ### Version 7.2.3.1 - 2025-09-26
 
 #### Added
--   Support for new 12-byte `DECIMAL` type
+-   Support for new 12-byte `DECIMAL` type.
 
 
 #### Fixed
@@ -49,25 +63,26 @@
 -   Updated underlying Java API to 7.2.3.0.
 
 #### Fixed
--   Issue creating an external table from a remote query containing a WKT type.
+-   Issue creating an external table from a remote query containing a `WKT`
+    type.
 -   Update count reported by `getLargeUpdateCount()`.
 
 
 ### Version 7.2.2.17 - 2025-11-12
 
 #### Fixed
--   Preservation of HA failover order in user-given URLs
+-   Preservation of HA failover order in user-given URLs.
 
 #### Changed
--   Updated underlying Java API to 7.2.2.16
+-   Updated underlying Java API to 7.2.2.16.
 
 
 ### Version 7.2.2.16 - 2025-10-07
 
 #### Changed
 -   Switched retry handler to retry on higher-level `SocketException` instead of
-    lower-level `ConnectException` & `NoRouteToHostException`
--   Updated underlying Java API to 7.2.2.15
+    lower-level `ConnectException` & `NoRouteToHostException`.
+-   Updated underlying Java API to 7.2.2.15.
 
 
 ### Version 7.2.2.15 - 2025-09-03
@@ -76,22 +91,22 @@
 -   Handling of multi-part KiFS upload that is too big for the target directory.
 
 #### Changed
--   Updated underlying Java API to 7.2.2.14
+-   Updated underlying Java API to 7.2.2.14.
 
 
 ### Version 7.2.2.14 - 2025-08-24
 
 #### Changed
--   Improved forward-compatibility for new `DECIMAL` type
--   Upgraded Apache Commons Lang3 library to 3.18.0
--   Updated underlying Java API to 7.2.2.13
+-   Improved forward-compatibility for new `DECIMAL` type.
+-   Upgraded Apache Commons Lang3 library to 3.18.0.
+-   Updated underlying Java API to 7.2.2.13.
 
 
 ### Version 7.2.2.13 - 2025-08-18
 
 #### Fixed
 -   Issue with query iterating over a batch size that is greater
-    than the configured `max_get_records_size` on the server
+    than the configured `max_get_records_size` on the server.
 
 
 ### Version 7.2.2.12 - 2025-06-08
@@ -99,7 +114,7 @@
 #### Added
 -   Added HA connection string options:
     - `FailbackPollInterval`:  Seconds to wait between fail-back service polls
-      of the primary cluster
+      of the primary cluster.
     - `FailoverOrder`:  Determines whether the cluster failed over to is
       selected randomly or in the sequence specified by the user.  Valid values
       are `RANDOM` and `SEQUENTIAL`.
@@ -122,7 +137,8 @@
     - `ASYNC_PARALLEL`
 
 #### Changed
--   `NoSync` connection string option is now deprecated, but still supported.  Use new `Replication=NONE` option instead.
+-   `NoSync` connection string option is now deprecated, but still supported.
+    Use new `Replication=NONE` option instead.
 -   Simplified design of fail-back poller.
 
 #### Fixed
@@ -137,48 +153,49 @@
 -   Handled connection scenario where primary cluster is initially down.
 
 #### Changed
--   Updated underlying Java API to 7.2.2.9
+-   Updated underlying Java API to 7.2.2.9.
 
 
 ### Version 7.2.2.9 - 2025-03-27
 
 #### Added
--   Retrying connections in case of HTTP 502 responses
+-   Retrying connections in case of HTTP 502 responses.
 
 #### Changed
--   Updated underlying Java API to 7.2.2.8
+-   Updated underlying Java API to 7.2.2.8.
 
 
 ### Version 7.2.2.8 - 2025-02-24
 
 #### Added
--   More error types supported in retrying connections
+-   More error types supported in retrying connections.
 
 #### Changed
--   Updated underlying Java API to 7.2.2.7
--   Upgraded Logback library to 1.3.15
+-   Updated underlying Java API to 7.2.2.7.
+-   Upgraded Logback library to 1.3.15.
 
 
 ### Version 7.2.2.7 - 2025-02-04
 
 #### Changed
--   Updated underlying Java API to 7.2.2.6
+-   Updated underlying Java API to 7.2.2.6.
 -   Switched read timeout on system status checks to the configured server
-    connection timeout
+    connection timeout.
 
 
 ### Version 7.2.2.6 - 2025-01-31
 
 #### Added
--   Support for JDBC getLargeUpdateCount()
+-   Support for JDBC `getLargeUpdateCount()`.
 -   Parameters for modifying the initial connection per-server timeout and
-    overall connection negotiation timeout in seconds
+    overall connection negotiation timeout in seconds.
 
 #### Changed
--   Updated underlying Java API to 7.2.2.5
+-   Updated underlying Java API to 7.2.2.5.
 
 #### Fixed
--   KiSQL now correctly reports counts of changed rows when greater than 2 billion
+-   KiSQL now correctly reports counts of changed rows when greater than 2
+    billion.
 
 
 ### Version 7.2.2.5 - 2024-12-17
@@ -186,155 +203,156 @@
 #### Added
 -   Support for key lookups returning a subset of a table's columns with fewer
     lookup restrictions when using `KI_HINT_KEY_LOOKUP` hint or `UseKeyLookup`
-    JDBC option
+    JDBC option.
 
 #### Changed
--   Updated underlying Java API to 7.2.2.4
+-   Updated underlying Java API to 7.2.2.4.
 -   Inserting values with functions like `NOW()` is now handled by the JDBC
-    driver via multi-head insert
+    driver via multi-head insert.
 
 
 ### Version 7.2.2.4 - 2024-12-03
 
 #### Fixed
--   Queries with query parameters only returning first page of results
--   Schema support for KiSQL command-invoked catalog queries
+-   Queries with query parameters only returning first page of results.
+-   Schema support for KiSQL command-invoked catalog queries.
 
 #### Removed
--   Support for time zone override
+-   Support for time zone override.
 
 
 ### Version 7.2.2.3 - 2024-10-29
 
 #### Added
--   Failback to a primary cluster after failing over to a secondary cluster
+-   Failback to a primary cluster after failing over to a secondary cluster.
 
 #### Changed
--   Updated underlying Java API to 7.2.2.3
--   Upgraded Avro library to 1.11.4
+-   Updated underlying Java API to 7.2.2.3.
+-   Upgraded Avro library to 1.11.4.
 
 #### Fixed
--   Error message for bad URLs with auto-discovery disabled
--   Potential resource leaks upon connection errors
+-   Error message for bad URLs with auto-discovery disabled.
+-   Potential resource leaks upon connection errors.
 
 
 ### Version 7.2.2.2 - 2024-10-24
 
 #### Changed
--   Updated underlying Java API to 7.2.2.2
+-   Updated underlying Java API to 7.2.2.2.
 
 #### Fixed
--   Issue with lookup up server version when auto-discovery is disabled
+-   Issue with lookup up server version when auto-discovery is disabled.
 
 
 ### Version 7.2.2.1 - 2024-10-22
 
 #### Changed
--   Reduced endpoint call overhead for connections and `RecordRetriever`
--   Updated underlying Java API to 7.2.2.1
+-   Reduced endpoint call overhead for connections and `RecordRetriever`.
+-   Updated underlying Java API to 7.2.2.1.
 
 
 ### Version 7.2.2.0 - 2024-10-15
 
 #### Added
--   OAuth2 authentication support
+-   OAuth2 authentication support.
 
 #### Changed
--   Updated underlying Java API to 7.2.2.0
--   Modified POM for publishing to Maven Central Repository
--   Upgraded Jackson core library to 2.17.1
--   Downgraded Logback library to 1.3.14
--   Upgraded SLF4j library to 2.0.13
+-   Updated underlying Java API to 7.2.2.0.
+-   Modified POM for publishing to Maven Central Repository.
+-   Upgraded Jackson core library to 2.17.1.
+-   Downgraded Logback library to 1.3.14.
+-   Upgraded SLF4j library to 2.0.13.
 
 #### Fixed
--   Issue with `fullshaded` driver terminating with no linked Snappy library
--   Issue with default string column values overwriting blank user input
--   Issue with `CREATE PROCEDURE` permission commands not being parsed properly
+-   Issue with `fullshaded` driver terminating with no linked Snappy library.
+-   Issue with default string column values overwriting blank user input.
+-   Issue with `CREATE PROCEDURE` permission commands not being parsed properly.
 
 
 ### Version 7.2.1.0 - 2024-09-08
 
 #### Changed
--   Updated underlying Java API to 7.2.1.0
+-   Updated underlying Java API to 7.2.1.0.
 
 #### Fixed
--   Snappy error for `fullshaded` JAR
+-   Snappy error for `fullshaded` JAR.
 
 
 ### Version 7.2.0.7 - 2024-06-07
 
 #### Changed
--   Better parsing of multi-line SQL terminating semicolon
--   Updated underlying Java API to 7.2.0.5
+-   Better parsing of multi-line SQL terminating semicolon.
+-   Updated underlying Java API to 7.2.0.5.
 
 #### Fixed
--   Returned Time and Timestamp objects will now always output 3 milliseconds in their toString() methods
--   Out-of-memory error when downloading large files
+-   Returned Time and Timestamp objects will now always output 3 milliseconds in
+    their `toString()` methods.
+-   Out-of-memory error when downloading large files.
 
 
 ### Version 7.2.0.6 - 2024-05-16
 
 #### Added
--   Added --stopOnFirstError option for KiSQL
+-   Added `--stopOnFirstError` option for KiSQL.
 
 #### Fixed
--   Thread-safety with JDBC Date fields
--   getTime(column).toString() was not showing milliseconds
+-   Thread-safety with JDBC Date fields.
+-   `getTime(column).toString()` was not showing milliseconds.
 
 
 ### Version 7.2.0.5 - 2024-04-16
 
 #### Added
--   Support for DataSource interface
+-   Support for DataSource interface.
 
 #### Fixed
--   TimeZoneOverride setting
--   Output now works with TimeZone's default
+-   `TimeZoneOverride` setting.
+-   Output now works with TimeZone's default.
 
 
 ### Version 7.2.0.4 - 2024-04-04
 
 #### Changed
--   Lowered default server connection timeout to 5 seconds
+-   Lowered default server connection timeout to 5 seconds.
 -   Made server connection timeout (user-specified or default) govern connection
-    timeouts in all cases of initially connecting to a server
--   Updated underlying Java API to 7.2.0.4
+    timeouts in all cases of initially connecting to a server.
+-   Updated underlying Java API to 7.2.0.4.
 
 
 ### Version 7.2.0.3 - 2024-03-20
 
 #### Added
--   Support for unsigned long type in arrays
+-   Support for unsigned long type in arrays.
 
 #### Changed
--   Updated underlying Java API to 7.2.0.3
+-   Updated underlying Java API to 7.2.0.3.
 
 #### Fixed
--   Various timezone-related issues
+-   Various timezone-related issues.
 
 
 ### Version 7.2.0.2 - 2024-03-13
 
 #### Changed
--   Added support for setArray() for query parameters
+-   Added support for `setArray()` for query parameters.
 -   Increased connection timeout from ~1 to 20 seconds to account for
-    connections over high-traffic and public networks
--   Upgraded Snappy library from 1.1.10.4 to 1.1.10.5
+    connections over high-traffic and public networks.
+-   Upgraded Snappy library from 1.1.10.4 to 1.1.10.5.
 
 #### Fixed
--   Outputting floats in scientific notation with negative-two-digit exponents
+-   Outputting floats in scientific notation with negative-two-digit exponents.
 
 
 ### Version 7.2.0.1 - 2024-02-27
 
 #### Changed
--   Upgraded Apache HTTPClient5 library from 5.3 to 5.3.1
+-   Upgraded Apache HTTPClient5 library from 5.3 to 5.3.1.
 
 
 ### Version 7.2.0.0 - 2024-02-11
 
 #### Changed
--   Updated underlying Java API to 7.2.0.0
+-   Updated underlying Java API to 7.2.0.0.
 
 
 ## Version 7.1
