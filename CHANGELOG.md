@@ -2,6 +2,12 @@
 
 ## Version 7.2
 
+### Version 7.2.3.6 - 2025-12-03
+
+#### Fixed
+-   Performance degradation when hints are present in `INSERT` statements.
+
+
 ### Version 7.2.3.5 - 2025-12-02
 
 #### Changed
