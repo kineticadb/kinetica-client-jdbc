@@ -2,6 +2,15 @@
 
 ## Version 7.2
 
+### Version 7.2.3.7 - 2025-12-08
+
+#### Changed
+-   Prevented fail-over from re-checking current cluster before failing over.
+-   Fail-over/fail-back processing to handle query planner down state.
+-   Connectivity to all head nodes is verified, regardless of hostname matching.
+-   Updated underlying Java API to 7.2.3.6.
+
+
 ### Version 7.2.3.6 - 2025-12-03
 
 #### Fixed
