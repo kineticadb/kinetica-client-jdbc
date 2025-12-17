@@ -2,6 +2,18 @@
 
 ## Version 7.2
 
+### Version 7.2.3.8 - 2025-12-17
+
+#### Changed
+-   Upgraded compilation to Java 11.
+-   Reworked concurrency-handling scheme for inserts.
+-   Updated underlying Java API to 7.2.3.7.
+
+#### Fixed
+-   Issue with Snappy compression failing with large ingest payloads.
+-   Issue with inserting `DATETIME` data into `TIMESTAMP` columns.
+
+
 ### Version 7.2.3.7 - 2025-12-08
 
 #### Changed
