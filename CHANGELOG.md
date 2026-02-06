@@ -2,6 +2,14 @@
 
 ## Version 7.2
 
+### Version 7.2.3.11 - 2026-02-05
+
+#### Changed
+-   Better maintained ordering of cluster failover sequence when primary URL is
+    specified in connection parameters.
+-   Updated underlying Java API to 7.2.3.11.
+
+
 ### Version 7.2.3.10 - 2026-01-09
 
 #### Changed
