@@ -2,6 +2,19 @@
 
 ## Version 7.2
 
+### Version 7.2.3.12 - 2026-02-20
+
+#### Changed
+-   Reduced timeout for checking connectivity to server-known URLs that don't
+    match user-given ones.
+-   Streamlined initial connection sequence when multi-head is disabled on the
+    server, as is the case with Developer Edition.
+-   Properly applied hostname regular expression to worker ranks during
+    fail-over.
+-   Default HA fail-over mode is now sequential.
+-   Updated underlying Java API to 7.2.3.12.
+
+
 ### Version 7.2.3.11 - 2026-02-05
 
 #### Changed
