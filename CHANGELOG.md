@@ -2,6 +2,16 @@
 
 ## Version 7.2
 
+### Version 7.2.3.13 - 2026.03.01
+
+#### Added
+-   Support for array of bytes data type.
+
+#### Changed
+-   Upgraded Avro library to 1.12.1.
+-   Updated underlying Java API to 7.2.3.13.
+
+
 ### Version 7.2.3.12 - 2026-02-20
 
 #### Changed
