@@ -2,6 +2,13 @@
 
 ## Version 7.2
 
+### Version 7.2.3.16 - 2026.04.09
+
+#### Changed
+-   Upgraded Snappy library to 1.1.10.8.
+-   Updated underlying Java API to 7.2.3.16.
+
+
 ### Version 7.2.3.15 - 2026.03.22
 
 #### Changed
