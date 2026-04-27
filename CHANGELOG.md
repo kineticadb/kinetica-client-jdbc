@@ -2,6 +2,16 @@
 
 ## Version 7.2
 
+### Version 7.2.3.17 - 2026-04-26
+
+#### Added
+-   Option to change the number of automatic retries of failed requests.
+
+#### Changed
+-   KiSQL shows current (impersonated) user instead of authenticated user.
+-   Updated underlying Java API to 7.2.3.17.
+
+
 ### Version 7.2.3.16 - 2026.04.09
 
 #### Changed
