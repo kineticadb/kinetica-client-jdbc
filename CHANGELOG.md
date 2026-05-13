@@ -2,6 +2,20 @@
 
 ## Version 7.2
 
+### Version 7.2.3.18 - 2026-05-13
+
+#### Added
+-   Preliminary support for advanced SQL Procedure syntax.
+
+#### Changed
+-   Optimized bulk ingest for single worker rank installations.
+
+#### Fixed
+-   Reporting of affected row counts from MERGE INTO statements.
+-   Extra logging in `BulkInserter` for table permission check fails.
+-   Broken logo link in readme file.
+
+
 ### Version 7.2.3.17 - 2026-04-26
 
 #### Added
