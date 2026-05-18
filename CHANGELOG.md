@@ -2,6 +2,17 @@
 
 ## Version 7.2
 
+### Version 7.2.3.19 - 2026-05-18
+
+#### Added
+-   Passing of driver name & version in HTTP headers.
+-   New driver versions with auto-loading of the driver disabled and with the
+    logging configuration removed.
+
+#### Notes
+-   Check CHANGELOG-FUNCTIONS.md for endpoint related changes.
+
+
 ### Version 7.2.3.18 - 2026-05-13
 
 #### Added
