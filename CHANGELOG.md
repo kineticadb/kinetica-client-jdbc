@@ -2,6 +2,21 @@
 
 ## Version 7.2
 
+### Version 7.2.3.20 - 2026-07-08
+
+#### Added
+-   Checking of draining HA queue status on connection; fail over if so.
+-   Support for UPDATE_WITH_NOW & UPDATE_WITH_USER.
+-   Support for anonymous procedural DO blocks.
+
+#### Changed
+-   Upgraded jackson-databind library to 2.18.8
+-   Updated underlying Java API to 7.2.3.20.
+
+#### Fixed
+-   Used server-side INSERT when statement contains ON CONFLICT
+
+
 ### Version 7.2.3.19 - 2026-05-18
 
 #### Added
@@ -9,8 +24,8 @@
 -   New driver versions with auto-loading of the driver disabled and with the
     logging configuration removed.
 
-#### Notes
--   Check CHANGELOG-FUNCTIONS.md for endpoint related changes.
+#### Changed
+-   Updated underlying Java API to 7.2.3.19.
 
 
 ### Version 7.2.3.18 - 2026-05-13
@@ -20,6 +35,7 @@
 
 #### Changed
 -   Optimized bulk ingest for single worker rank installations.
+-   Updated underlying Java API to 7.2.3.18.
 
 #### Fixed
 -   Reporting of affected row counts from MERGE INTO statements.
