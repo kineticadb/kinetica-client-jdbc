@@ -2,6 +2,23 @@
 
 ## Version 7.2
 
+### Version 7.2.3.21 - 2026-07-29
+
+#### Added
+-   Gradle build support.
+-   New connection options:
+    - `ErrorMode`:  default error handling for INSERTs
+    - `FileHasHeader`:  whether a CSV's first line is a header
+    - `TokenNameClaim`:  the name of the JWT claim containing the username; used
+      when connecting via OAuth
+
+#### Changed
+-   Allow insert (with truncation) of timestamps with micro/nanoseconds.
+
+#### Fixed
+-   Issue with user query options being ignored.
+
+
 ### Version 7.2.3.20 - 2026-07-08
 
 #### Added
@@ -10,11 +27,11 @@
 -   Support for anonymous procedural DO blocks.
 
 #### Changed
--   Upgraded jackson-databind library to 2.18.8
+-   Upgraded jackson-databind library to 2.18.8.
 -   Updated underlying Java API to 7.2.3.20.
 
 #### Fixed
--   Used server-side INSERT when statement contains ON CONFLICT
+-   Used server-side INSERT when statement contains ON CONFLICT.
 
 
 ### Version 7.2.3.19 - 2026-05-18
