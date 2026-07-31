@@ -2,6 +2,19 @@
 
 ## Version 7.2
 
+### Version 7.2.3.22 - 2026-07-31
+
+#### Changed
+-   Upgraded Jackson libraries to 2.22.1.
+-   Connection property names are now case-insensitive.
+-   Updated logger to handle concurrent threads.
+-   Updated underlying Java API to 7.2.3.22.
+
+#### Fixed
+-   Issue with reporting uploaded file names with large multi-part file uploads.
+-   Issue with handling failures in large multi-part file uploads.
+
+
 ### Version 7.2.3.21 - 2026-07-29
 
 #### Added
@@ -14,6 +27,7 @@
 
 #### Changed
 -   Allow insert (with truncation) of timestamps with micro/nanoseconds.
+-   Updated underlying Java API to 7.2.3.21.
 
 #### Fixed
 -   Issue with user query options being ignored.
