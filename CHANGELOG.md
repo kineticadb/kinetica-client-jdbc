@@ -2,6 +2,41 @@
 
 ## Version 7.2
 
+### Version 7.2.3.23 - 2026-08-13
+
+#### Changed
+-   A key lookup whose value cannot be parsed as the shard key's type, such as
+    a malformed UUID, now reports an error instead of returning an empty
+    result set.
+-   Replaced the ThreeTen Backport (`org.threeten:threetenbp`) date/time
+    library with the built-in `java.time` package, removing the dependency.
+-   Upgraded json library to 20260814.
+-   The bundled json library is now relocated to `com.gpudb.json` in the
+    shaded drivers, so it no longer collides with an `org.json` version
+    shipped by the host application.
+-   Updated underlying Java API to 7.2.3.23.
+
+#### Fixed
+-   Shard key calculation for `timestamp` columns holding a value outside the
+    supported year range of 1000-2900, which was encoded as though it were in
+    range; a BC timestamp no longer yields the same shard key as the AD
+    timestamp of the same year.  Affects the routing of INSERTs and the
+    results of key lookups on such a column.
+-   Mixing non-query and query statements on the same `Statement` object.
+    Results from an earlier execution were left in place, so `getResultSet()`
+    and `getUpdateCount()` could report on the wrong statement, and reusing a
+    `Statement` after a DDL or DML statement could yield no rows or throw a
+    `NullPointerException`.  Each execution now discards the previous results,
+    and `execute()` describes the first result as `java.sql.Statement`
+    specifies.
+-   Parameter binding for a batched `PreparedStatement` when the same
+    parameter is bound with different SQL types across rows of the batch, such
+    as a typed value in one row and an untyped NULL in another.  The batch
+    schema was taken from the first row while every row was encoded against
+    its own type, so the server decoded later rows with the wrong schema; the
+    parameter types are now reconciled across the whole batch before encoding.
+
+
 ### Version 7.2.3.22 - 2026-07-31
 
 #### Changed
