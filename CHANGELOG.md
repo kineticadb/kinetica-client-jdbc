@@ -2,6 +2,16 @@
 
 ## Version 7.2
 
+### Version 7.2.3.24 - 2026-08-20
+
+#### Changed
+-   Updated underlying Java API to 7.2.3.24.
+
+#### Fixed
+-   Corrected `ResultSet` implementations to throw `SQLException` instead of
+    `RuntimeException`, when encountered, for row-paged & key-lookup results.
+
+
 ### Version 7.2.3.23 - 2026-08-13
 
 #### Changed
