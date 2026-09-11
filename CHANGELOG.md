@@ -2,6 +2,34 @@
 
 ## Version 7.2
 
+### Version 7.2.3.25 - 2026-09-11
+
+#### Changed
+-   `DisableMultiheadInsert` and the `KI_HINT_DISABLE_MULTIHEAD` hint now only
+    control where an INSERT's rows are sent, not how the statement is run.  Use
+    `KI_HINT_SERVER_SIDE_INSERT` to have a statement forwarded as SQL text.
+-   Upgraded jline libraries to 3.30.16 and removed unneeded jline packages;
+    closes CVEs:
+    - CVE-2026-56740
+    - CVE-2026-56741
+-   KiSQL now gets a full interactive terminal when run from a shaded driver.
+
+#### Fixed
+-   Disabling multi-head ingest now routes through the head node properly.
+-   An upsert quietly behaved as a plain insert when multi-head ingest was off.
+    Under `DisableMultiheadInsert` or `KI_HINT_DISABLE_MULTIHEAD`, a simple
+    `INSERT ... VALUES` ignored the statement's own insert hints and
+    `OPTIONS(...)`, including `KI_HINT_UPDATE_ON_EXISTING_PK`, so rows with an
+    existing primary key were not updated.
+-   An INSERT against a table that has mutated will be retried after updating
+    the cached copy of that table's DDL.
+-   Binding a number to a `timestamp` parameter, as
+    `setObject(n, epochMillis, Types.TIMESTAMP)` does, converts properly.
+-   `ResultSetMetaData.isSigned()` now responds `false` for `ulong` and
+    non-numeric columns.
+-   The `fullshaded` driver emits log output again.
+
+
 ### Version 7.2.3.24 - 2026-08-20
 
 #### Changed
