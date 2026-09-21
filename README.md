@@ -48,7 +48,8 @@ Driver class:
 
 ### Common Connection Parameters
 
-For the full parameter set, see
+For the full parameter set, including every authentication option, see the
+[Connection Guide](docs/CONNECTION_GUIDE.md) in this repository, or the
 [ODBC/JDBC Connection Guide](https://docs.kinetica.com/7.2/connectors/sql_guide/#odbc-jdbc-configuration).
 
 | Parameter      | Description
@@ -96,6 +97,7 @@ parameter, and the URL of the one to use first for the `PrimaryURL` parameter:
 
 
 ## Documentation
+- [Connection Guide](docs/CONNECTION_GUIDE.md) - every connection-string parameter, authentication methods and examples
 - [Full Documentation](https://docs.kinetica.com/7.2/)
 - [ODBC/JDBC Connection Guide](https://docs.kinetica.com/7.2/connectors/sql_guide/)
 

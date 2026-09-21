@@ -2,6 +2,28 @@
 
 ## Version 7.2
 
+### Version 7.2.3.26 - 2026-09-20
+
+#### Added
+-   OAuth authentication, selected with `AuthMethod=oauth` and configured
+    through the `Auth.` namespace: `Auth.issuer`, `Auth.clientId`,
+    `Auth.clientSecret`, `Auth.scope` and so on.  Existing `UID`/`PWD` and
+    `OAuthToken` connections are unaffected, and `docs/CONNECTION_GUIDE.md`
+    covers the surface in full.
+    - `OAuthGrant` chooses the flow: `client_credentials` for a service
+      account, `jwt-bearer` for a key-pair service identity signed with an
+      unencrypted PKCS#8 key, `authorization_code` for browser sign-in with
+      PKCE, plus `device_code`, `refresh_token` and `token-exchange`.
+    - `AuthProvider` adopts a provider's vocabulary: `entra`, `okta`, or
+      `command` to take a token from an external program.
+    - `AuthPluginClass` names your own credential provider class.
+    - `OAuthTokenCache` says where acquired tokens are kept, one of `none`,
+      `memory` (the default) or `system`.
+
+#### Changed
+-   Updated underlying Java API to 7.2.3.25.
+
+
 ### Version 7.2.3.25 - 2026-09-11
 
 #### Changed
