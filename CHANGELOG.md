@@ -2,6 +2,25 @@
 
 ## Version 7.2
 
+### Version 7.2.3.27 - 2026-09-29
+
+#### Added
+-   `DriverManager.setLoginTimeout()` is now honored: a connection attempt that
+    outlives it fails with `SQLTimeoutException` rather than running to
+    completion, which bounds a connection to an unreachable server.  Callers
+    that already set one -- including pools that set it from their own
+    connection timeout -- will now see slow attempts fail at the timeout
+    instead of succeeding late.  Zero, the default, still waits indefinitely.
+
+#### Changed
+-   Updated underlying Java API to 7.2.3.26.
+
+#### Fixed
+-   `clearBatch()` no longer throws `NullPointerException`.
+-   `Statement.executeBatch()` no longer re-runs the previous batch.
+-   Misreporting of some complex column type classes & names.
+
+
 ### Version 7.2.3.26 - 2026-09-20
 
 #### Added
