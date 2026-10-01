@@ -2,6 +2,16 @@
 
 ## Version 7.2
 
+### Version 7.2.3.28 - 2026-09-30
+
+#### Changed
+-   Updated underlying Java API to 7.2.3.27.
+
+#### Fixed
+-   Regression with `INSERT INTO...SELECT...FROM FILE` with out-of-order column
+    selection.
+
+
 ### Version 7.2.3.27 - 2026-09-29
 
 #### Added
