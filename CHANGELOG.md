@@ -2,6 +2,35 @@
 
 ## Version 7.2
 
+### Version 7.2.3.29 - 2026-10-29
+
+#### Added
+-   Each connection is its own session for SQL `#name` temp tables: two
+    connections for the same user no longer share one `#name`.  Closing a
+    connection drops the temp tables it created.
+-   `SessionId` connection property, and KiSQL `--sessionId` option, to use a
+    given session for `#name` temp tables, so several connections can share
+    them.  The caller drops that session with `/drop/session`; closing the
+    connection does not.
+
+#### Changed
+-   The shaded JAR no longer carries Snappy's compiled library for less
+    frequently used platforms.  On any other platform the client warns and sends
+    requests uncompressed.
+-   Removed unused classes in the bundled/relocated Apache HttpClient & Commons
+    Lang libraries.
+-   Used `minimizeJar` to reduce the size of published JARs.
+-   Ingested timestamp values are now assumed to be in UTC.
+-   Upgraded Jackson libraries to 2.22.4.
+-   Updated underlying Java API to 7.2.3.28.
+
+#### Fixed
+-   `DatabaseMetaData.getDriverVersion()`, and so KiSQL's `\v`, reported
+    `7.2.3` for every 7.2.3.x release, and `Driver.getMajorVersion()` and
+    `getMinorVersion()` reported 2.0.  Both now report the driver's actual
+    version.
+
+
 ### Version 7.2.3.28 - 2026-09-30
 
 #### Changed

@@ -46,6 +46,38 @@ Driver class:
     com.kinetica.jdbc.Driver
 
 
+### Which JAR to use
+
+Use `jar-with-dependencies` unless you have a specific reason not to.
+
+Every driver JAR bundles the Kinetica API, which is what makes the driver
+self-contained; none of them contains it twice.  The `shaded` and `fullshaded`
+variants additionally relocate their third-party libraries (Jackson, Apache
+Commons, JLine) out of the way, for host applications that ship conflicting
+versions of those libraries.  That rewriting reaches inside the bundled API as
+well, so its classes keep their `com.gpudb` names while their method signatures
+no longer match an ordinary build's.
+
+If a shaded/relocated JDBC JAR is loaded into a process that already has the
+Kinetica API, the two copies collide.
+
+    java.lang.NoSuchMethodError: 'com.gpudb.apache.avro.Schema com.gpudb.Type.getSchema()'
+
+A `com.gpudb.apache.` prefix in such an error is the tell: that package name
+exists only in a shaded driver, so seeing it means a shaded JAR is loaded
+somewhere it should not be.
+
+### Datasources and datasinks
+
+A `jdbc:kinetica:` datasource or datasink needs no driver JAR.  The database
+supplies its own, and omitting `jdbc_driver_jar_path` is the supported setup.
+
+Setting `jdbc_driver_jar_path` overrides that entirely, and the JAR named is
+then loaded into a process that already has the Kinetica API, and a collision
+ensues.  If a Kinetica-to-Kinetica export fails that way, check the datasource
+for an explicit `jdbc_driver_jar_path` and remove it.
+
+
 ### Common Connection Parameters
 
 For the full parameter set, including every authentication option, see the
