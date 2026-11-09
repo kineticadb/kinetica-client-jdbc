@@ -2,6 +2,12 @@
 
 ## Version 7.2
 
+### Version 7.2.3.30 - 2026-11-09
+
+#### Changed
+-   Updated underlying Java API to 7.2.3.29.
+
+
 ### Version 7.2.3.29 - 2026-10-29
 
 #### Added
@@ -12,6 +18,10 @@
     given session for `#name` temp tables, so several connections can share
     them.  The caller drops that session with `/drop/session`; closing the
     connection does not.
+-   `SET CATALOG <name>`, and `Connection.setCatalog()`, make a federated data
+    source's catalog the default for unqualified table names; `KINETICA` or an
+    empty name returns to the local catalog.  INSERTs into a catalog-qualified
+    table are executed by the server.
 
 #### Changed
 -   The shaded JAR no longer carries Snappy's compiled library for less
@@ -21,6 +31,8 @@
     Lang libraries.
 -   Used `minimizeJar` to reduce the size of published JARs.
 -   Ingested timestamp values are now assumed to be in UTC.
+-   INSERT into a view or materialized view fails with `... of type: VIEW` or
+    `... of type: MATERIALIZED VIEW`, naming which of the two it was.
 -   Upgraded Jackson libraries to 2.22.4.
 -   Updated underlying Java API to 7.2.3.28.
 
@@ -29,6 +41,10 @@
     `7.2.3` for every 7.2.3.x release, and `Driver.getMajorVersion()` and
     `getMinorVersion()` reported 2.0.  Both now report the driver's actual
     version.
+-   INSERT rejected a string value the driver could not convert to its
+    column's type, even one the server accepts through SQL.  On a 7.2.3.18 or
+    later server, the driver now sends such a column as a string for the server
+    to convert.
 
 
 ### Version 7.2.3.28 - 2026-09-30
