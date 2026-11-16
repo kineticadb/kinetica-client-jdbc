@@ -2,10 +2,47 @@
 
 ## Version 7.2
 
+### Version 7.2.3.31 - 2026-11-15
+
+#### Changed
+-   `UPLOAD FILE` now fails when a file pattern matches no local file or when
+    two of its files would be uploaded to the same KiFS path.
+-   Updated underlying Java API to 7.2.3.30.
+
+#### Fixed
+-   `DatabaseMetaData.getTables()` returned no tables when its types included
+    `TABLE`, so a tool asking for tables and views listed only views; and
+    `getTableTypes()` reported `BASE TABLE` where `getTables()` reports
+    `TABLE`.
+-   `UPLOAD FILE` given a file by name also uploaded files of the same name
+    from the subdirectories beside it, and `UPLOAD FILE ... INTO '~'` failed
+    with "Remote directory does not exist".
+-   A key lookup (`KI_HINT_KEY_LOOKUP` or `UseKeyLookup`) returning more than
+    one page could return the first page again in place of a later one after
+    a fail-over or shard-map change.
+-   A connection to an HTTPS server that reset the connection during the TLS
+    handshake failed with a certificate error advising a trust store, instead
+    of being retried or failed over.
+-   An INSERT that lost its connection to the server was reported as
+    "Table ... does not exist!".
+
+#### Removed
+-   Support for Kinetica 7.1 and earlier databases.
+
+
 ### Version 7.2.3.30 - 2026-11-09
 
 #### Changed
 -   Updated underlying Java API to 7.2.3.29.
+
+#### Fixed
+-   Writes failed, or failed over and back repeatedly, for several seconds
+    after a cluster was taken offline and back online, with `[HA] Unavailable:
+    Producer not available` or `Consumer not created`.  Such a request is now
+    re-sent to the same server after a wait (1 second, doubling to 8); a bulk
+    INSERT can wait up to about 39 seconds before failing over.
+-   A connection authenticated with an OAuth token did not fail back to its
+    primary cluster.
 
 
 ### Version 7.2.3.29 - 2026-10-29

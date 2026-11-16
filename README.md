@@ -29,10 +29,7 @@ The Kinetica JDBC Driver supports connections from a wide array of JDBC-aware
 applications to the Kinetica database.
 
 
-Ideally, the version of the driver must match that of the database; e.g., the
-7.2 version of the driver is interoperable with any Kinetica 7.2.X.Y database.
-However, the 7.2 driver may be compatible with 7.1 database instances for most
-use cases.
+The 7.2 version of the driver works with Kinetica 7.2.0 and later databases.
 
 
 ## Configure
