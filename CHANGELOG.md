@@ -2,6 +2,19 @@
 
 ## Version 7.2
 
+### Version 7.2.3.32 - 2026-11-16
+
+#### Changed
+-   Updated underlying Java API to 7.2.3.31.
+
+#### Security
+-   Upgraded Snappy from 1.1.10.8 to 1.1.10.9; JDBC unaffected, but for clients
+    that use decompression through the embedded Snappy library, fixes:
+    -   CVE-2026-93451
+    -   CVE-2026-108106
+    -   CVE-2026-116590
+
+
 ### Version 7.2.3.31 - 2026-11-15
 
 #### Changed
