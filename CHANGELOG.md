@@ -2,6 +2,21 @@
 
 ## Version 7.2
 
+### Version 7.2.3.33 - 2026-11-18
+
+#### Changed
+-   Updated underlying Java API to 7.2.3.32.
+
+#### Fixed
+-   Only the cluster whose head rank is unreachable at its advertised addresses
+    operates in degraded mode; HA discovery still continues on.
+-   Honored disabling of auto-discovery even after fail-over/fail-back.
+-   On Windows, `UPLOAD FILE` failed for every file as matching no local file,
+    or uploaded nothing.
+-   `UPLOAD FILE` read a file name holding `[` or `{` as a pattern, so
+    `'q[1].csv'` uploaded `q1.csv` instead, or failed as matching nothing.
+
+
 ### Version 7.2.3.32 - 2026-11-16
 
 #### Changed
